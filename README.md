@@ -1,17 +1,27 @@
----
-
 <div align="center">
 
-## 📊 GitHub Contribution Stats
+## 📊 GitHub Analytics & Contribution Insights
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=SuperShary&theme=radical&hide_border=true&background=0D1117&ring=E46060&fire=E46060&currStreakLabel=E46060)](https://github.com/SuperShary)
+### **1,052+ Contributions | 51 Total Contributions This Year | Active Daily Coder**
 
-<img src="https://github-readme-stats.vercel.app/api?username=SuperShary&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=E46060&icon_color=E46060&text_color=C9D1D9" width="49%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperShary&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=E46060&text_color=C9D1D9" width="49%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=SuperShary&theme=tokyonight&hide_border=true&background=0D1117&ring=00D9FF&fire=00D9FF&currStreakLabel=00D9FF&sideLabels=00D9FF&dates=8B949E" width="48%" alt="GitHub Streak Stats"/>
+<img src="https://github-readme-stats.vercel.app/api?username=SuperShary&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=00D9FF&text_color=C9D1D9&count_private=true&include_all_commits=true" width="48%" alt="GitHub Stats"/>
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=SuperShary&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=E46060&line=E46060&point=C9D1D9)
+### 📈 **Contribution Activity Graph**
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=SuperShary&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=00D9FF&line=00D9FF&point=FFFFFF)
 
-**🔥 Total Contributions:** 1,052+ in the last year | **💻 Active Coding:** Daily | **🌟 Growing Portfolio**
+### 💻 **Most Used Languages & Technologies**
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperShary&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=C9D1D9&langs_count=8" width="48%" alt="Top Languages"/>
+<img src="https://github-profile-trophy.vercel.app/?username=SuperShary&theme=darkhub&no-frame=true&column=4&margin-w=15&margin-h=15" width="48%" alt="GitHub Trophies"/>
+
+### 🎯 **Quick Stats**
+
+🔥 **Current Streak:** 2 Days | 📅 **Longest Streak:** 4 Days | ⭐ **Total Stars Earned:** 0 | 👥 **Total Followers:** 1
+
+📊 **Total Commits (2025):** 51+ | 📂 **Total PRs:** 0 | 🐛 **Total Issues:** 1 | 📋 **Repositories:** 19
+
+**🚀 Actively Contributing** | **🌟 Building Projects** | **💼 Open to Opportunities**
+
 
 </div>
 
@@ -213,20 +223,6 @@ const programmingSkills = {
 - 🔄 **ETL**: Data Pipelines, Big Data Processing, Apache Spark
 - 🏗️ **Architecture**: Data Warehousing, Data Lake, Stream Processing
 
----
-
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=supershary&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=supershary&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages" height="170"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=supershary&theme=radical&hide_border=true" alt="GitHub Streak" width="600"/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=supershary&theme=radical&no-frame=true&column=7&margin-w=15" alt="GitHub Trophies" width="800"/>
-
-</div>
 
 ---
 

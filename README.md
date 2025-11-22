@@ -1,3 +1,22 @@
+---
+
+<div align="center">
+
+## 📊 GitHub Contribution Stats
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=SuperShary&theme=radical&hide_border=true&background=0D1117&ring=E46060&fire=E46060&currStreakLabel=E46060)](https://github.com/SuperShary)
+
+<img src="https://github-readme-stats.vercel.app/api?username=SuperShary&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=E46060&icon_color=E46060&text_color=C9D1D9" width="49%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SuperShary&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=E46060&text_color=C9D1D9" width="49%" />
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=SuperShary&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=E46060&line=E46060&point=C9D1D9)
+
+**🔥 Total Contributions:** 1,052+ in the last year | **💻 Active Coding:** Daily | **🌟 Growing Portfolio**
+
+</div>
+
+---
+
 <div align="center">
 
 # 💫 Shagun Choudhary

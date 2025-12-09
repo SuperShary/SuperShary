@@ -215,7 +215,7 @@
 
 **Bachelor of Technology, Computer Science & Engineering**  
 Jaypee University of Information Technology (JUIT), Solan  
-**2022 - 2026** | CGPA: 8.5+
+**2022 - 2026** | CGPA: 6.5+
 
 **Relevant Coursework:**  
 Machine Learning | Deep Learning | Artificial Intelligence | NLP | Computer Vision | Distributed Systems | Cloud Architecture

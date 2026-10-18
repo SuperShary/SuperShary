@@ -67,6 +67,12 @@
 <img src="https://streak-stats.demolab.com?user=SuperShary&background=0A0E14&ring=22D3EE&fire=22D3EE&currStreakLabel=22D3EE&currStreakNum=E6FDFF&sideNums=E6FDFF&sideLabels=9FB3BC&dates=6B7F89&stroke=1F2A33&border=1F2A33" alt="Contribution streak" />
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/main/profile-3d-contrib/profile-night-green.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/main/profile-3d-contrib/profile-green.svg" />
+  <img alt="3D contribution calendar, last year" src="https://raw.githubusercontent.com/SuperShary/SuperShary/main/profile-3d-contrib/profile-night-green.svg" width="100%" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake.svg" />
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" />

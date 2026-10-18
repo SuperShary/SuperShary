@@ -1,0 +1,30 @@
+name: Profile 3D contribution calendar
+
+on:
+  schedule:
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: yoshi389111/github-profile-3d-contrib@0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & push
+        run: |
+          git config user.name "Shagun Choudhary"
+          git config user.email "shagun@proxsoftglobal.com"
+          git add -A profile-3d-contrib
+          if git commit -m "chore: refresh 3D contribution calendar"; then
+            git push
+          fi

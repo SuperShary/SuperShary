@@ -5,7 +5,7 @@ on:
     - cron: "30 18 * * *"
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, readme-v2]
 
 permissions:
   contents: write

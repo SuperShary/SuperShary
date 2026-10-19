@@ -99,9 +99,9 @@ More public repos: ${more}
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${user}/${user}/main/profile-3d-contrib/profile-night-green.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/${user}/${user}/main/profile-3d-contrib/profile-green.svg" />
-  <img alt="3D contribution calendar, last year" src="https://raw.githubusercontent.com/${user}/${user}/main/profile-3d-contrib/profile-night-green.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-green.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-green.svg" />
+  <img alt="3D contribution calendar, last year" src="profile-3d-contrib/profile-night-green.svg" width="100%" />
 </picture>
 
 <picture>

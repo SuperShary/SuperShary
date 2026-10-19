@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" role="img" aria-label="Nexus AI: AP automation for construction ERPs: invoice in, PO match, approval routing, clean posting. In production.">
+<style>
+  .s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif} .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .grow{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes grow{from{transform:scaleY(0)}}
+  .wide{transform-box:fill-box;transform-origin:left;animation:wide 1.2s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes wide{from{transform:scaleX(0)}}
+  .in{animation:in .9s ease-out both} @keyframes in{from{opacity:0;transform:translateY(6px)}}
+  .edge{stroke-dasharray:120 1400;animation:edge 6s linear infinite} @keyframes edge{to{stroke-dashoffset:-1520}}
+  .live{animation:pulse 2s ease-in-out infinite} @keyframes pulse{50%{opacity:.25}}
+</style>
+<rect x="1" y="1" width="598" height="198" rx="16" fill="#ffffff" stroke="#d5e6eb"/>
+<rect class="edge" style="animation-delay:-2s" x="1" y="1" width="598" height="198" rx="16" fill="none" stroke="#0891b2" stroke-width="1.5"/>
+<text class="m" x="26" y="36" font-size="11" letter-spacing="2" fill="#0891b2">IN PRODUCTION · PRIVATE</text>
+<text class="s" x="26" y="70" font-size="24" font-weight="700" fill="#0b2a33">Nexus AI</text>
+<text class="s" x="26" y="100" font-size="14.5" fill="#4f6b75">AP automation for construction ERPs: invoice in, PO match,</text>
+<text class="s" x="26" y="120" font-size="14.5" fill="#4f6b75">approval routing, clean posting. In production.</text>
+</svg>

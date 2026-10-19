@@ -1,0 +1,48 @@
+name: Rebuild profile (brain, data card, project cards)
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main, readme-v2]
+    paths:
+      - "data/now.json"
+      - "data/projects.json"
+      - "scripts/**"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Pull numbers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/fetch-data.mjs
+      - name: Draw
+        run: |
+          node scripts/brain.mjs
+          node scripts/cards.mjs
+          node scripts/readme.mjs
+      - name: Commit if anything changed
+        run: |
+          git config user.name "Shagun Choudhary"
+          git config user.email "shagun@proxsoftglobal.com"
+          git add -A data assets README.md
+          if git commit -m "chore: daily profile rebuild"; then
+            git push
+          fi

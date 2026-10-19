@@ -10,10 +10,11 @@ import { readFile, writeFile } from "node:fs/promises";
 const live = JSON.parse(await readFile("data/live.json", "utf8"));
 const gh = live.github;
 
-const W = 1200, H = 560;
-const CX = 820, CY = 268, S = 400;   // brain centre and scale on screen
+const W = 1200, H = 690;
+const CX = 790, CY = 335, S = 610;   // brain centre and scale: the brain is the hero, ~60% of the width
+const FLOOR = CY + 0.47 * S;         // the orbit rings sit under the brain stem
 const T = 40;                        // seconds per full turn
-const TILT = (17 * Math.PI) / 180;   // we look at it slightly from above
+const TILT = (12 * Math.PI) / 180;   // we look at it slightly from above
 const EASE = ".37 0 .63 1";          // easeInOutSine = half a cosine
 
 // Deterministic randomness: the brain keeps its shape from day to day.
@@ -131,7 +132,7 @@ const proj = nodes.map((n) => project(n.p));
 const THEMES = {
   dark: {
     bg: "#0b0f14", grid: "#12202a", text: "#E6FDFF", muted: "#8aa3ad", accent: "#22D3EE", faint: "#36515c",
-    levels: ["#1d4150", "#0e7490", "#06b6d4", "#22D3EE", "#cffafe"], edge: "#22D3EE", pulse: "#e6fdff", glow: "#22D3EE",
+    levels: ["#2b6a7c", "#13a3c2", "#22D3EE", "#7ee8fa", "#f0feff"], edge: "#22D3EE", pulse: "#f0feff", glow: "#22D3EE",
   },
   light: {
     bg: "#f5fafc", grid: "#e1eef2", text: "#0b2a33", muted: "#4f6b75", accent: "#0891b2", faint: "#a9c6cf",
@@ -155,8 +156,8 @@ function render(theme) {
     @keyframes blink{50%{opacity:0}}
     .type{animation:type 2.6s steps(44) .4s both}
     @keyframes type{from{width:0}to{width:560px}}
-    .orbit{transform-origin:${CX}px ${CY + 196}px;animation:spin 24s linear infinite}
-    .orbit2{transform-origin:${CX}px ${CY + 196}px;animation:spin 36s linear infinite reverse}
+    .orbit{transform-origin:${CX}px ${FLOOR}px;animation:spin 24s linear infinite}
+    .orbit2{transform-origin:${CX}px ${FLOOR}px;animation:spin 36s linear infinite reverse}
     @keyframes spin{to{transform:rotate(360deg)}}
     .scan{animation:scan 7s ease-in-out infinite}
     @keyframes scan{0%{transform:translateY(-40px);opacity:0}15%{opacity:.5}85%{opacity:.5}100%{transform:translateY(${H - 40}px);opacity:0}}
@@ -168,16 +169,16 @@ function render(theme) {
     <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${t.glow}" stop-opacity="${theme === "dark" ? 0.16 : 0.12}"/><stop offset="1" stop-color="${t.glow}" stop-opacity="0"/></radialGradient>
     <radialGradient id="scanG" cx="50%" cy="100%" r="50%" gradientTransform="translate(0 .5) scale(1 .5) translate(0 -.5)"><stop offset="0" stop-color="${t.accent}" stop-opacity=".28"/><stop offset="1" stop-color="${t.accent}" stop-opacity="0"/></radialGradient>
     <linearGradient id="scanL"><stop offset="0" stop-color="${t.accent}" stop-opacity="0"/><stop offset=".5" stop-color="${t.accent}" stop-opacity=".7"/><stop offset="1" stop-color="${t.accent}" stop-opacity="0"/></linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <clipPath id="typeClip"><rect class="type" x="56" y="150" width="560" height="30"/></clipPath>
   </defs>`);
   out.push(`<rect width="${W}" height="${H}" rx="18" fill="${t.bg}"/><rect width="${W}" height="${H}" rx="18" fill="url(#dots)"/>`);
-  out.push(`<ellipse cx="${CX}" cy="${CY}" rx="330" ry="250" fill="url(#halo)"/>`);
+  out.push(`<ellipse cx="${CX}" cy="${CY}" rx="470" ry="330" fill="url(#halo)"/>`);
   // floor rings
-  out.push(`<g fill="none" stroke="${t.accent}"><ellipse class="orbit" cx="${CX}" cy="${CY + 196}" rx="250" ry="34" stroke-opacity=".35" stroke-dasharray="2 10"/><ellipse class="orbit2" cx="${CX}" cy="${CY + 196}" rx="300" ry="44" stroke-opacity=".18" stroke-dasharray="40 14 4 14"/></g>`);
+  out.push(`<g fill="none" stroke="${t.accent}"><ellipse class="orbit" cx="${CX}" cy="${FLOOR}" rx="330" ry="44" stroke-opacity=".35" stroke-dasharray="2 10"/><ellipse class="orbit2" cx="${CX}" cy="${FLOOR}" rx="400" ry="58" stroke-opacity=".18" stroke-dasharray="40 14 4 14"/></g>`);
 
   // synapses
-  out.push(`<g stroke="${t.edge}" stroke-width=".8" stroke-opacity="${theme === "dark" ? 0.22 : 0.28}" fill="none">`);
+  out.push(`<g stroke="${t.edge}" stroke-width="1.1" stroke-opacity="${theme === "dark" ? 0.3 : 0.34}" fill="none">`);
   for (const [i, j] of edges) {
     const a = proj[i], b = proj[j];
     out.push(`<line x1="${r1(at0(a.X))}" y1="${r1(at0(a.Y))}" x2="${r1(at0(b.X))}" y2="${r1(at0(b.Y))}">${anim("x1", a.X)}${anim("y1", a.Y)}${anim("x2", b.X)}${anim("y2", b.Y)}</line>`);
@@ -189,7 +190,7 @@ function render(theme) {
   nodes.forEach((n, i) => {
     const P = proj[i];
     const level = n.day ? n.day.level : 0;
-    const base = n.day ? 1.5 + level * 0.85 : 1.3;
+    const base = n.day ? 2.2 + level * 1.25 : 1.8;
     const color = n.day ? t.levels[level] : t.faint;
     const op = depthTo(0.18, 1)(P.D);
     out.push(`<circle cx="${r1(at0(P.X))}" cy="${r1(at0(P.Y))}" r="${r1(base)}" fill="${color}">${anim("cx", P.X)}${anim("cy", P.Y)}${anim("opacity", op, 2)}</circle>`);
@@ -200,7 +201,7 @@ function render(theme) {
   const adj = nodes.map(() => []);
   edges.forEach(([i, j]) => { adj[i].push(j); adj[j].push(i); });
   const walk = rng(77);
-  out.push(`<g stroke="${t.pulse}" stroke-width="2.2" stroke-linecap="round" fill="none" filter="url(#glow)">`);
+  out.push(`<g stroke="${t.pulse}" stroke-width="3.6" stroke-linecap="round" fill="none" filter="url(#glow)">`);
   const HOP = 0.32, CHAIN = 7, PERIOD = 6.4;
   for (let c = 0; c < 18; c++) {
     let cur = Math.floor(walk() * dayPts.length), prev = -1;
@@ -211,7 +212,7 @@ function render(theme) {
       const nxt = opts[Math.floor(walk() * opts.length)];
       const a = proj[cur], b = proj[nxt];
       const t0 = (h * HOP) / PERIOD, t1 = ((h + 1) * HOP) / PERIOD;
-      out.push(`<line x1="${r1(at0(a.X))}" y1="${r1(at0(a.Y))}" x2="${r1(at0(b.X))}" y2="${r1(at0(b.Y))}" pathLength="100" stroke-dasharray="16 400" stroke-dashoffset="16">${anim("x1", a.X)}${anim("y1", a.Y)}${anim("x2", b.X)}${anim("y2", b.Y)}<animate attributeName="stroke-dashoffset" values="16;16;-100;-100" keyTimes="0;${r2(t0)};${r2(t1)};1" dur="${PERIOD}s" begin="${r2(-start)}s" repeatCount="indefinite"/></line>`);
+      out.push(`<line x1="${r1(at0(a.X))}" y1="${r1(at0(a.Y))}" x2="${r1(at0(b.X))}" y2="${r1(at0(b.Y))}" pathLength="100" stroke-dasharray="22 400" stroke-dashoffset="22">${anim("x1", a.X)}${anim("y1", a.Y)}${anim("x2", b.X)}${anim("y2", b.Y)}<animate attributeName="stroke-dashoffset" values="22;22;-100;-100" keyTimes="0;${r2(t0)};${r2(t1)};1" dur="${PERIOD}s" begin="${r2(-start)}s" repeatCount="indefinite"/></line>`);
       prev = cur; cur = nxt;
     }
   }
@@ -221,8 +222,14 @@ function render(theme) {
   const marker = (idx, label, delay, below = false) => {
     const P = proj[idx];
     const op = depthTo(0.25, 1)(P.D);
-    const lx = lin(P.X, 14, 1), ly = lin(P.Y, below ? 22 : -12, 1);
-    return `<g>${anim("opacity", op, 2)}<circle r="4" fill="none" stroke="${t.accent}" stroke-width="1.5" cx="${r1(at0(P.X))}" cy="${r1(at0(P.Y))}">${anim("cx", P.X)}${anim("cy", P.Y)}<animate attributeName="r" values="4;16" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="1;0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/></circle><text class="mono" font-size="12" fill="${t.text}" x="${r1(at0(lx))}" y="${r1(at0(ly))}">${anim("x", lx)}${anim("y", ly)}${esc(label)}</text></g>`;
+    // The label slides from the right of its neuron (left side of the brain) to
+    // the left of it (right side), so it never leaves the canvas. Linear in X,
+    // so it stays a sinusoid.
+    const w = label.length * 10.4 + 16, reach = 0.6 * S;
+    const k = (w + 44) / (2 * reach);
+    const lx = lin(P.X, 22 - k * (reach - CX), 1 - k), ly = lin(P.Y, below ? 34 : -16, 1);
+    const bx = lin(lx, -8, 1), by = lin(ly, -19, 1);
+    return `<g>${anim("opacity", op, 2)}<circle r="6" fill="none" stroke="${t.accent}" stroke-width="2" cx="${r1(at0(P.X))}" cy="${r1(at0(P.Y))}">${anim("cx", P.X)}${anim("cy", P.Y)}<animate attributeName="r" values="6;24" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="1;0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/></circle><rect rx="6" width="${w}" height="26" fill="${t.bg}" fill-opacity=".82" stroke="${t.accent}" stroke-opacity=".5" x="${r1(at0(bx))}" y="${r1(at0(by))}">${anim("x", bx)}${anim("y", by)}</rect><text class="mono" font-size="17" font-weight="700" fill="${t.text}" x="${r1(at0(lx))}" y="${r1(at0(ly))}">${anim("x", lx)}${anim("y", ly)}${esc(label)}</text></g>`;
   };
   const busiestIdx = days.findIndex((d) => d.date === gh.busiest.date);
   out.push(marker(days.length - 1, "today", 0));
@@ -230,7 +237,7 @@ function render(theme) {
   if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2, true));
 
   // scan line
-  out.push(`<g class="scan"><rect x="${CX - 300}" y="0" width="600" height="40" fill="url(#scanG)"/><line x1="${CX - 260}" x2="${CX + 260}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);
+  out.push(`<g class="scan"><rect x="${CX - 420}" y="0" width="840" height="40" fill="url(#scanG)"/><line x1="${CX - 380}" x2="${CX + 380}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);
 
   // HUD: left column
   out.push(`<g class="fade">
@@ -250,7 +257,7 @@ function render(theme) {
     out.push(`<g class="fade" style="animation-delay:${0.5 + i * 0.18}s"><text class="mono" x="56" y="${y}" font-size="30" font-weight="700" fill="${t.accent}">${esc(v)}</text><text class="mono" x="${56 + 18.2 * v.length + 14}" y="${y}" font-size="15" fill="${t.muted}">${esc(l)}</text></g>`);
   });
   // legend
-  const ly = 486;
+  const ly = H - 82;
   out.push(`<g class="mono" font-size="12" fill="${t.muted}"><text x="56" y="${ly}">1 neuron = 1 day</text>`);
   t.levels.forEach((c, i) => out.push(`<circle cx="${190 + i * 22}" cy="${ly - 4}" r="${1.5 + i * 0.85}" fill="${c}"/>`));
   out.push(`<text x="${190 + 5 * 22}" y="${ly}">more commits</text>`);

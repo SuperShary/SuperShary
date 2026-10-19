@@ -5,7 +5,7 @@ on:
     - cron: "15 0 * * *"
   workflow_dispatch:
   push:
-    branches: [main, readme-v2]
+    branches: [main]
     paths:
       - "data/now.json"
       - "data/projects.json"
@@ -44,5 +44,10 @@ jobs:
           git config user.email "shagun@proxsoftglobal.com"
           git add -A data assets README.md
           if git commit -m "chore: daily profile rebuild"; then
-            git push
+            # Two workflows commit to main on the same push: rebase and retry.
+            for i in 1 2 3; do
+              if git pull --rebase origin "${GITHUB_REF_NAME}" && git push; then exit 0; fi
+              sleep $((i * 5))
+            done
+            exit 1
           fi

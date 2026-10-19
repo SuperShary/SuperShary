@@ -1,0 +1,27 @@
+{
+  "featured": [
+    { "repo": "verdict-proof", "title": "Verdict", "hook": "Every invoice becomes a reasoned pay / hold decision, proven with a seeded stress test and live PDF reading.", "tags": ["AP automation", "document AI"], "links": { "live": "https://verdict-chi-one.vercel.app", "film": "https://youtu.be/FGKhSeXxdio" } },
+    { "repo": "claude-council", "title": "Claude Council", "hook": "80 legendary minds debate your decision in character, then a High Council hands back one verdict.", "tags": ["agent skill", "multi-agent"], "links": { "site": "https://supershary.github.io/claude-council/" } },
+    { "repo": "multi-agent-invoice-reconciliation-system", "title": "Invoice Reconciliation Agents", "hook": "Agents extract supplier invoices, fuzzy-match them to purchase orders and flag every discrepancy.", "tags": ["multi-agent", "Python"], "links": {} },
+    { "repo": "Building-an-AI-agent-Chrome-extension", "title": "Agent Chrome Extension", "hook": "A Manifest V3 extension with a rule-based reasoning agent over semantic and keyword search.", "tags": ["agents", "browser"], "links": {} },
+    { "repo": "Holospeed", "title": "Holospeed", "hook": "Fly a spaceship through infinite space by moving your hands in front of the camera.", "tags": ["hand tracking", "3D"], "links": { "live": "https://holospeed.vercel.app" } },
+    { "repo": "Lamborgini", "title": "Aventador Scrollytelling", "hook": "The Aventador explodes into its parts as you scroll. Built live for a SuperShary tutorial.", "tags": ["scroll animation", "tutorial"], "links": { "live": "https://lamborgini-mu.vercel.app" } },
+    { "repo": "monsterenergy", "title": "Monster Energy Scrollytelling", "hook": "Rotating 3D cans driven by scroll. The second build from the same tutorial series.", "tags": ["scroll animation", "3D"], "links": { "live": "https://monsterenergy-theta.vercel.app" } },
+    { "repo": "beyondchats", "title": "LLM Response Evaluator", "hook": "A Python pipeline that scores chatbot answers for relevance and hallucination in real time.", "tags": ["LLM evals", "Python"], "links": {} }
+  ],
+  "more": ["Resume-Analyzer-Pro", "infocream_web", "nexuspredictai", "cinematch", "aidoctor", "jbl", "FluxColab", "jarvis"],
+  "hidden": ["SuperShary", "GoGreen", "lonlybot", "Assignment"],
+  "private": [
+    { "title": "Nexus AI", "hook": "AP automation for construction ERPs: invoice in, PO match, approval routing, clean posting. In production." },
+    { "title": "SuperShary OS", "hook": "A desktop command centre where a team of AI agents runs the day's work with me." }
+  ],
+  "channels": [
+    { "handle": "SuperSharyG63", "name": "SuperShary", "hook": "Building real systems with AI agents, start to finish." },
+    { "handle": "Shagunchoudharyrocks", "name": "Shagun Choudhary", "hook": "Car explainers for Indian buyers: why the market does what it does." }
+  ],
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/supershary",
+    "x": "https://x.com/supersharyai",
+    "instagram": "https://www.instagram.com/supershary.ai"
+  }
+}

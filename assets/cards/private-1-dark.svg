@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" width="600" height="230" role="img" aria-label="SuperShary OS: A desktop command centre where a team of AI agents runs the day's work with me.">
+<style>
+  .s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif} .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .grow{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes grow{from{transform:scaleY(0)}}
+  .wide{transform-box:fill-box;transform-origin:left;animation:wide 1.2s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes wide{from{transform:scaleX(0)}}
+  .in{animation:in .9s ease-out both} @keyframes in{from{opacity:0;transform:translateY(6px)}}
+  .edge{stroke-dasharray:120 1400;animation:edge 6s linear infinite} @keyframes edge{to{stroke-dashoffset:-1520}}
+  .live{animation:pulse 2s ease-in-out infinite} @keyframes pulse{50%{opacity:.25}}
+</style>
+<rect x="1" y="1" width="598" height="228" rx="16" fill="#0f161d" stroke="#1c2a33"/>
+<rect class="edge" style="animation-delay:-1s" x="1" y="1" width="598" height="228" rx="16" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+<text class="m" x="26" y="36" font-size="13" letter-spacing="2" fill="#22D3EE">IN PRODUCTION · PRIVATE</text>
+<text class="s" x="26" y="78" font-size="32" font-weight="700" fill="#E6FDFF">SuperShary OS</text>
+<text class="s" x="26" y="114" font-size="19" fill="#8aa3ad">A desktop command centre where a team of AI agents</text>
+<text class="s" x="26" y="140" font-size="19" fill="#8aa3ad">runs the day's work with me.</text>
+</svg>

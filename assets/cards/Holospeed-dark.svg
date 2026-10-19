@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 230" width="600" height="230" role="img" aria-label="Holospeed: Fly a spaceship through infinite space by moving your hands in front of the camera.">
+<style>
+  .s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif} .m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+  .grow{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes grow{from{transform:scaleY(0)}}
+  .wide{transform-box:fill-box;transform-origin:left;animation:wide 1.2s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes wide{from{transform:scaleX(0)}}
+  .in{animation:in .9s ease-out both} @keyframes in{from{opacity:0;transform:translateY(6px)}}
+  .edge{stroke-dasharray:120 1400;animation:edge 6s linear infinite} @keyframes edge{to{stroke-dashoffset:-1520}}
+  .live{animation:pulse 2s ease-in-out infinite} @keyframes pulse{50%{opacity:.25}}
+</style>
+<rect x="1" y="1" width="598" height="228" rx="16" fill="#0f161d" stroke="#1c2a33"/>
+<rect class="edge" style="animation-delay:-3s" x="1" y="1" width="598" height="228" rx="16" fill="none" stroke="#22D3EE" stroke-width="1.5"/>
+<text class="m" x="26" y="36" font-size="13" letter-spacing="2" fill="#22D3EE">LIVE PROJECT</text>
+<text class="m" x="574" y="36" font-size="15" text-anchor="end" fill="#22D3EE">live ↗</text>
+<text class="s" x="26" y="78" font-size="32" font-weight="700" fill="#E6FDFF">Holospeed</text>
+<text class="s" x="26" y="114" font-size="19" fill="#8aa3ad">Fly a spaceship through infinite space by moving your</text>
+<text class="s" x="26" y="140" font-size="19" fill="#8aa3ad">hands in front of the camera.</text>
+<rect x="26" y="180" width="124" height="26" rx="13" fill="#123842"/><text class="m" x="88" y="198" font-size="13" text-anchor="middle" fill="#22D3EE">hand tracking</text>
+<rect x="158" y="180" width="36" height="26" rx="13" fill="#123842"/><text class="m" x="176" y="198" font-size="13" text-anchor="middle" fill="#22D3EE">3D</text>
+<text class="m" x="574" y="198" font-size="13" text-anchor="end" fill="#8aa3ad">updated 21 Dec 2025</text>
+<text class="m" x="407.9" y="198" font-size="13" text-anchor="end" fill="#3178c6">● TypeScript</text>
+</svg>

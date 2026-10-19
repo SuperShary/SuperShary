@@ -226,8 +226,8 @@ function render(theme) {
   };
   const busiestIdx = days.findIndex((d) => d.date === gh.busiest.date);
   out.push(marker(days.length - 1, "today", 0));
-  // A busiest day close to today sits next to it at the front: label it below.
-  if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2, dist2(nodes[busiestIdx].p, nodes[days.length - 1].p) < 0.04));
+  // Today's label sits above its neuron and the best day's below, so they never collide.
+  if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2, true));
 
   // scan line
   out.push(`<g class="scan"><rect x="${CX - 300}" y="0" width="600" height="40" fill="url(#scanG)"/><line x1="${CX - 260}" x2="${CX + 260}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);

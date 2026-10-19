@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 1377 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 1378 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
 
 <a href="https://www.youtube.com/@SuperSharyG63"><img alt="SuperShary" src="https://img.shields.io/badge/SuperShary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
 <a href="https://www.youtube.com/@Shagunchoudharyrocks"><img alt="Shagun Choudhary" src="https://img.shields.io/badge/Shagun%20Choudhary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
@@ -22,7 +22,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 1377 contributions, 13 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 1378 contributions, 13 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
 
 </div>
 

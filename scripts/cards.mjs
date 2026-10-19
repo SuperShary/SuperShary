@@ -123,7 +123,7 @@ function dataCard(theme) {
 }
 
 // ---------------- project / channel cards ----------------
-const CW = 600, CH = 200;
+const CW = 600, CH = 230;
 function card(theme, { kicker, title, hook, tags = [], meta = [], cta }) {
   const t = THEMES[theme];
   const o = [];
@@ -131,20 +131,20 @@ function card(theme, { kicker, title, hook, tags = [], meta = [], cta }) {
   o.push(style(t));
   o.push(`<rect x="1" y="1" width="${CW - 2}" height="${CH - 2}" rx="16" fill="${t.panel}" stroke="${t.line}"/>`);
   o.push(`<rect class="edge" style="animation-delay:-${(title.length % 6).toFixed(0)}s" x="1" y="1" width="${CW - 2}" height="${CH - 2}" rx="16" fill="none" stroke="${t.accent}" stroke-width="1.5"/>`);
-  o.push(`<text class="m" x="26" y="36" font-size="11" letter-spacing="2" fill="${t.accent}">${esc(kicker.toUpperCase())}</text>`);
-  if (cta) o.push(`<text class="m" x="${CW - 26}" y="36" font-size="12" text-anchor="end" fill="${t.muted}">${esc(cta)} ↗</text>`);
-  o.push(`<text class="s" x="26" y="70" font-size="24" font-weight="700" fill="${t.text}">${esc(title)}</text>`);
-  wrap(hook, 66).slice(0, 3).forEach((line, i) => o.push(`<text class="s" x="26" y="${100 + i * 20}" font-size="14.5" fill="${t.muted}">${esc(line)}</text>`));
+  o.push(`<text class="m" x="26" y="36" font-size="13" letter-spacing="2" fill="${t.accent}">${esc(kicker.toUpperCase())}</text>`);
+  if (cta) o.push(`<text class="m" x="${CW - 26}" y="36" font-size="15" text-anchor="end" fill="${t.accent}">${esc(cta)} ↗</text>`);
+  o.push(`<text class="s" x="26" y="78" font-size="32" font-weight="700" fill="${t.text}">${esc(title)}</text>`);
+  wrap(hook, 54).slice(0, 2).forEach((line, i) => o.push(`<text class="s" x="26" y="${114 + i * 26}" font-size="19" fill="${t.muted}">${esc(line)}</text>`));
   let x = 26;
   tags.forEach((tag) => {
-    const w = tag.length * 6.9 + 18;
-    o.push(`<rect x="${x}" y="152" width="${w.toFixed(0)}" height="22" rx="11" fill="${t.soft}"/><text class="m" x="${(x + w / 2).toFixed(0)}" y="167" font-size="11" text-anchor="middle" fill="${t.accent}">${esc(tag)}</text>`);
+    const w = tag.length * 8 + 20;
+    o.push(`<rect x="${x}" y="180" width="${w.toFixed(0)}" height="26" rx="13" fill="${t.soft}"/><text class="m" x="${(x + w / 2).toFixed(0)}" y="198" font-size="13" text-anchor="middle" fill="${t.accent}">${esc(tag)}</text>`);
     x += w + 8;
   });
   let mx = CW - 26;
   [...meta].reverse().forEach((m) => {
-    o.push(`<text class="m" x="${mx}" y="167" font-size="11.5" text-anchor="end" fill="${m.color || t.muted}">${esc(m.text)}</text>`);
-    mx -= m.text.length * 7 + 18;
+    o.push(`<text class="m" x="${mx}" y="198" font-size="13" text-anchor="end" fill="${m.color || t.muted}">${esc(m.text)}</text>`);
+    mx -= m.text.length * 7.9 + 16;
   });
   o.push(`</svg>`);
   return o.join("\n");
@@ -159,7 +159,7 @@ for (const theme of ["dark", "light"]) {
     const r = gh.repos[p.repo];
     if (!r) { console.warn(`skip ${p.repo}: not a public repo`); continue; }
     const meta = [];
-    if (r.language) meta.push({ text: `● ${r.language}`, color: LANG_COLORS[r.language] });
+    if (r.language) meta.push({ text: `● ${r.language}`, color: theme === "light" && r.language === "JavaScript" ? "#9a7d00" : LANG_COLORS[r.language] });
     if (r.stars) meta.push({ text: `★ ${r.stars}` });
     meta.push({ text: `updated ${day(r.pushedAt)}` });
     const target = p.links.live ? "live" : p.links.site ? "site" : "repo";

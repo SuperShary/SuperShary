@@ -218,15 +218,16 @@ function render(theme) {
   out.push(`</g>`);
 
   // today + busiest day markers ride along with their neurons
-  const marker = (idx, label, delay) => {
+  const marker = (idx, label, delay, below = false) => {
     const P = proj[idx];
     const op = depthTo(0.25, 1)(P.D);
-    const lx = lin(P.X, 14, 1), ly = lin(P.Y, -12, 1);
+    const lx = lin(P.X, 14, 1), ly = lin(P.Y, below ? 22 : -12, 1);
     return `<g>${anim("opacity", op, 2)}<circle r="4" fill="none" stroke="${t.accent}" stroke-width="1.5" cx="${r1(at0(P.X))}" cy="${r1(at0(P.Y))}">${anim("cx", P.X)}${anim("cy", P.Y)}<animate attributeName="r" values="4;16" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values="1;0" dur="2.4s" begin="${delay}s" repeatCount="indefinite"/></circle><text class="mono" font-size="12" fill="${t.text}" x="${r1(at0(lx))}" y="${r1(at0(ly))}">${anim("x", lx)}${anim("y", ly)}${esc(label)}</text></g>`;
   };
   const busiestIdx = days.findIndex((d) => d.date === gh.busiest.date);
   out.push(marker(days.length - 1, "today", 0));
-  if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2));
+  // A busiest day close to today sits next to it at the front: label it below.
+  if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2, dist2(nodes[busiestIdx].p, nodes[days.length - 1].p) < 0.04));
 
   // scan line
   out.push(`<g class="scan"><rect x="${CX - 300}" y="0" width="600" height="40" fill="url(#scanG)"/><line x1="${CX - 260}" x2="${CX + 260}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);

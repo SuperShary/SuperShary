@@ -19,5 +19,6 @@
 <rect x="26" y="180" width="108" height="26" rx="13" fill="#dff3f8"/><text class="m" x="80" y="198" font-size="13" text-anchor="middle" fill="#0891b2">agent skill</text>
 <rect x="142" y="180" width="108" height="26" rx="13" fill="#dff3f8"/><text class="m" x="196" y="198" font-size="13" text-anchor="middle" fill="#0891b2">multi-agent</text>
 <text class="m" x="574" y="198" font-size="13" text-anchor="end" fill="#4f6b75">updated 17 Sept 2026</text>
-<text class="m" x="400" y="198" font-size="13" text-anchor="end" fill="#5391FE">● PowerShell</text>
+<text class="m" x="400" y="198" font-size="13" text-anchor="end" fill="#4f6b75">★ 1</text>
+<text class="m" x="360.3" y="198" font-size="13" text-anchor="end" fill="#5391FE">● PowerShell</text>
 </svg>

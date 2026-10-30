@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 2047 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 2135 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
 
 <a href="https://www.youtube.com/@SuperSharyG63"><img alt="SuperShary" src="https://img.shields.io/badge/SuperShary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
 <a href="https://www.youtube.com/@Shagunchoudharyrocks"><img alt="Shagun Choudhary" src="https://img.shields.io/badge/Shagun%20Choudhary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
@@ -22,7 +22,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 2047 contributions, 21 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 2135 contributions, 22 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
 
 </div>
 
@@ -97,6 +97,6 @@ More public repos: [Resume-Analyzer-Pro](https://github.com/SuperShary/Resume-An
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" width="100%" />
 </picture>
 
-<sub>This profile rebuilds itself every day. The brain, the data card and the cards are drawn by <a href="scripts">my own generator</a> (<a href="docs/RESEARCH-v3.md">how it works</a>). Last run 2026-10-29.</sub>
+<sub>This profile rebuilds itself every day. The brain, the data card and the cards are drawn by <a href="scripts">my own generator</a> (<a href="docs/RESEARCH-v3.md">how it works</a>). Last run 2026-10-30.</sub>
 
 </div>

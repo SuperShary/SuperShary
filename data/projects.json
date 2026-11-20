@@ -161,7 +161,7 @@
       "asOf": "2026-11-20",
       "stats": [
         {
-          "value": "493",
+          "value": "572",
           "label": "followers"
         },
         {
@@ -169,10 +169,14 @@
           "label": "posts"
         }
       ],
-      "source": "Hand-set, not pulled: views = sum of the 15 most recent reels in Meta Business Suite (top reel 1,196,229), read 2026-11-20 20:10 IST; followers and posts from the public profile, read 2026-11-20.",
+      "source": "Hand-set, not pulled: views = sum of the 15 most recent reels in Meta Business Suite (top reel 1,196,229), read 2026-11-20 20:10 IST; followers 572 and posts 20 from the profile on his phone, read 2026-11-20 20:41 IST.",
       "views": 1298853,
       "viewsNote": "15 most recent reels",
       "topReel": 1196229
     }
-  ]
+  ],
+  "reach": {
+    "headlineFloor": 2000000,
+    "comment": "Set on Shagun's word 2026-11-20; verified sum then 1.81M (accounts not yet counted: @supershary.ai, @noteasyguess, 5 older @aiwalivideos posts). The headline shows max(floor, computed sum), so the real sum takes over once it passes 2.0M."
+  }
 }

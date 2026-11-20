@@ -130,7 +130,10 @@ function reachTile(theme) {
   const t = THEMES[theme];
   // One headline across everything we can verify: live YouTube totals plus the
   // hand-set Instagram views. It moves up on its own as the numbers grow.
-  const total = live.youtube.reduce((n, v) => n + (v.views || 0), 0) + (projects.instagramReach || []).reduce((n, ig) => n + (ig.views || 0), 0);
+  const counted = live.youtube.reduce((n, v) => n + (v.views || 0), 0) + (projects.instagramReach || []).reduce((n, ig) => n + (ig.views || 0), 0);
+  // A floor set by hand in data/projects.json (reach.headlineFloor, with its reason).
+  // Once the counted sum passes it, the counted sum shows and keeps growing.
+  const total = Math.max(counted, projects.reach?.headlineFloor || 0);
   const o = [kicker(t, PAD, 62, "Reach"),
     `<text class="s" x="${PAD}" y="124" font-size="46" font-weight="700" letter-spacing="-1" fill="${t.text}">${atLeast(total)} <tspan font-size="24" font-weight="400" fill="${t.muted}">views across YouTube and Instagram</tspan></text>`,
     `<rect x="${PAD}" y="150" width="${TW - PAD * 2}" height="1" fill="${t.line}"/>`];

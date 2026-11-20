@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 4,298 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 4,401 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
 
 [YouTube](https://www.youtube.com/@SuperSharyG63) · [Instagram](https://www.instagram.com/supershary.ai) · [Discord](https://discord.gg/HyWFsTt8th) · [LinkedIn](https://www.linkedin.com/in/supershary) · [X](https://x.com/supersharyai)
 
@@ -43,7 +43,7 @@ Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 4,298 contributions in the last year, 43 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 4,401 contributions in the last year, 43 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
 
 </div>
 

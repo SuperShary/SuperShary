@@ -1,6 +1,5 @@
-// Generates the data profile card and the project / channel cards
-// (assets/data-*.svg, assets/cards/*-{dark,light}.svg) from pulled data only.
-import { readFile, writeFile, mkdir, readdir, rm } from "node:fs/promises";
+// Generates the data profile card (assets/data-{dark,light}.svg) from pulled data only.
+import { readFile, writeFile } from "node:fs/promises";
 
 const live = JSON.parse(await readFile("data/live.json", "utf8"));
 const projects = JSON.parse(await readFile("data/projects.json", "utf8"));
@@ -17,14 +16,6 @@ const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").
 const n = (v) => (v == null ? "n/a" : v.toLocaleString("en-US"));
 const compact = (v) => (v == null ? "n/a" : v >= 1e6 ? (v / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : v >= 1e4 ? Math.round(v / 1e3) + "K" : v.toLocaleString("en-US"));
 const day = (iso) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
-const wrap = (text, max) => {
-  const lines = [""];
-  for (const w of text.split(" ")) {
-    if ((lines.at(-1) + " " + w).trim().length > max) lines.push(w);
-    else lines[lines.length - 1] = (lines.at(-1) + " " + w).trim();
-  }
-  return lines;
-};
 const style = (t) => `<style>
   .s{font-family:${SANS}} .m{font-family:${MONO}}
   .grow{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
@@ -122,59 +113,5 @@ function dataCard(theme) {
   return o.join("\n");
 }
 
-// ---------------- project / channel cards ----------------
-const CW = 600, CH = 230;
-function card(theme, { kicker, title, hook, tags = [], meta = [], cta }) {
-  const t = THEMES[theme];
-  const o = [];
-  o.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${CW} ${CH}" width="${CW}" height="${CH}" role="img" aria-label="${esc(title)}: ${esc(hook)}">`);
-  o.push(style(t));
-  o.push(`<rect x="1" y="1" width="${CW - 2}" height="${CH - 2}" rx="16" fill="${t.panel}" stroke="${t.line}"/>`);
-  o.push(`<rect class="edge" style="animation-delay:-${(title.length % 6).toFixed(0)}s" x="1" y="1" width="${CW - 2}" height="${CH - 2}" rx="16" fill="none" stroke="${t.accent}" stroke-width="1.5"/>`);
-  o.push(`<text class="m" x="26" y="36" font-size="13" letter-spacing="2" fill="${t.accent}">${esc(kicker.toUpperCase())}</text>`);
-  if (cta) o.push(`<text class="m" x="${CW - 26}" y="36" font-size="15" text-anchor="end" fill="${t.accent}">${esc(cta)} ↗</text>`);
-  o.push(`<text class="s" x="26" y="78" font-size="32" font-weight="700" fill="${t.text}">${esc(title)}</text>`);
-  wrap(hook, 54).slice(0, 2).forEach((line, i) => o.push(`<text class="s" x="26" y="${114 + i * 26}" font-size="19" fill="${t.muted}">${esc(line)}</text>`));
-  let x = 26;
-  tags.forEach((tag) => {
-    const w = tag.length * 8 + 20;
-    o.push(`<rect x="${x}" y="180" width="${w.toFixed(0)}" height="26" rx="13" fill="${t.soft}"/><text class="m" x="${(x + w / 2).toFixed(0)}" y="198" font-size="13" text-anchor="middle" fill="${t.accent}">${esc(tag)}</text>`);
-    x += w + 8;
-  });
-  let mx = CW - 26;
-  [...meta].reverse().forEach((m) => {
-    o.push(`<text class="m" x="${mx}" y="198" font-size="13" text-anchor="end" fill="${m.color || t.muted}">${esc(m.text)}</text>`);
-    mx -= m.text.length * 7.9 + 16;
-  });
-  o.push(`</svg>`);
-  return o.join("\n");
-}
-
-await mkdir("assets/cards", { recursive: true });
-for (const f of await readdir("assets/cards")) await rm(`assets/cards/${f}`);
-const index = [];
-for (const theme of ["dark", "light"]) {
-  await writeFile(`assets/data-${theme}.svg`, dataCard(theme) + "\n");
-  for (const p of projects.featured) {
-    const r = gh.repos[p.repo];
-    if (!r) { console.warn(`skip ${p.repo}: not a public repo`); continue; }
-    const meta = [];
-    if (r.language) meta.push({ text: `● ${r.language}`, color: theme === "light" && r.language === "JavaScript" ? "#9a7d00" : LANG_COLORS[r.language] });
-    if (r.stars) meta.push({ text: `★ ${r.stars}` });
-    meta.push({ text: `updated ${day(r.pushedAt)}` });
-    const target = p.links.live ? "live" : p.links.site ? "site" : "repo";
-    await writeFile(`assets/cards/${p.repo}-${theme}.svg`, card(theme, { kicker: p.links.live ? "live project" : "open source", title: p.title, hook: p.hook, tags: p.tags, meta, cta: target }) + "\n");
-    if (theme === "dark") index.push({ file: p.repo, href: p.links.live || p.links.site || `https://github.com/${live.user}/${p.repo}`, alt: p.title });
-  }
-  for (const c of projects.channels) {
-    const yt = live.youtube.find((y) => y.handle === c.handle) || {};
-    await writeFile(`assets/cards/yt-${c.handle}-${theme}.svg`, card(theme, {
-      kicker: "YouTube channel", title: c.name, hook: c.hook, tags: [`@${c.handle}`],
-      meta: [{ text: `${compact(yt.subscribers)} subs` }, { text: `${compact(yt.videos)} videos` }, { text: `${compact(yt.views)} views` }], cta: "watch",
-    }) + "\n");
-  }
-  for (const [i, p] of projects.private.entries()) {
-    await writeFile(`assets/cards/private-${i}-${theme}.svg`, card(theme, { kicker: "in production · private", title: p.title, hook: p.hook, tags: [], meta: [] }) + "\n");
-  }
-}
-console.log(`cards: data + ${index.length} projects + ${projects.channels.length} channels + ${projects.private.length} private`);
+for (const theme of ["dark", "light"]) await writeFile(`assets/data-${theme}.svg`, dataCard(theme) + "\n");
+console.log("data card: dark + light");

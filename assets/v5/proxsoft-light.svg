@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720" role="img" aria-label="At Proxsoft, Founder's Office, AI and GTM. Nexus: In production. AP automation. An invoice arrives by email or upload, gets read and matched to its purchase order, and posts to the ERP only after a person approves. Foremind: Shown in live demos. AI agents for construction ERPs. The first module is AP automation: invoices in, matched and ready to approve."><style>.s{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,Roboto,'Helvetica Neue',Arial,sans-serif}.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:p 2.4s ease-in-out infinite}@keyframes p{50%{opacity:.35}}
+.edge{stroke-dasharray:140 2400;animation:e 9s linear infinite}@keyframes e{to{stroke-dashoffset:-2540}}
+.walk{animation:w 7s cubic-bezier(.6,0,.4,1) infinite}</style>
+<defs><clipPath id="c"><rect width="600" height="720" rx="22"/></clipPath></defs>
+<rect width="600" height="720" rx="22" fill="#fffdf8"/>
+
+<text class="m" x="36" y="62" font-size="17" letter-spacing="3" fill="#9a6408">AT PROXSOFT</text>
+<text class="s" x="36" y="110" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#0b0a09">Founder's Office, AI &amp; GTM</text>
+<text class="s" x="36" y="148" font-size="22" fill="#5b5750">AI agents for construction finance, on top of</text>
+<text class="s" x="36" y="178" font-size="22" fill="#5b5750">the ERP a company already runs.</text>
+<text class="s" x="36" y="248" font-size="30" font-weight="700" fill="#0b0a09">Nexus</text>
+<circle class="pulse" cx="149.8" cy="239" r="6" fill="#9a6408"/><text class="s" x="165.8" y="246" font-size="21" font-weight="600" fill="#9a6408">In production</text>
+<text class="s" x="36" y="284" font-size="22" fill="#5b5750">AP automation. An invoice arrives by email or</text>
+<text class="s" x="36" y="314" font-size="22" fill="#5b5750">upload, gets read and matched to its purchase</text>
+<text class="s" x="36" y="344" font-size="22" fill="#5b5750">order, and posts to the ERP only after a person</text>
+<text class="s" x="36" y="374" font-size="22" fill="#5b5750">approves.</text>
+<text class="s" x="36" y="444" font-size="30" font-weight="700" fill="#0b0a09">Foremind</text>
+<circle class="pulse" cx="201.1" cy="435" r="6" fill="#9a6408"/><text class="s" x="217.1" y="442" font-size="21" font-weight="600" fill="#9a6408">Shown in live demos</text>
+<text class="s" x="36" y="480" font-size="22" fill="#5b5750">AI agents for construction ERPs. The first</text>
+<text class="s" x="36" y="510" font-size="22" fill="#5b5750">module is AP automation: invoices in, matched</text>
+<text class="s" x="36" y="540" font-size="22" fill="#5b5750">and ready to approve.</text>
+<line x1="50" x2="550" y1="646" y2="646" stroke="#e0dacb" stroke-width="2"/>
+<circle cx="50" cy="646" r="6" fill="#8d887e"/>
+<text class="s" x="50" y="686" font-size="20" text-anchor="middle" font-weight="400" fill="#5b5750">arrives</text>
+<circle cx="175" cy="646" r="6" fill="#8d887e"/>
+<text class="s" x="175" y="686" font-size="20" text-anchor="middle" font-weight="400" fill="#5b5750">read</text>
+<circle cx="300" cy="646" r="6" fill="#8d887e"/>
+<text class="s" x="300" y="686" font-size="20" text-anchor="middle" font-weight="400" fill="#5b5750">matched</text>
+<circle cx="425" cy="646" r="9" fill="#9a6408"/>
+<text class="s" x="425" y="686" font-size="20" text-anchor="middle" font-weight="700" fill="#9a6408">approved</text>
+<text class="s" x="425" y="622" font-size="20" text-anchor="middle" font-weight="700" fill="#9a6408">a person decides</text>
+<circle cx="550" cy="646" r="6" fill="#8d887e"/>
+<text class="s" x="550" y="686" font-size="20" text-anchor="middle" font-weight="400" fill="#5b5750">posted</text>
+<style>@keyframes w{0%{transform:translateX(0)}35%{transform:translateX(375px)}65%{transform:translateX(375px)}100%{transform:translateX(500px)}}</style>
+<circle class="walk" cx="50" cy="646" r="5" fill="#0b0a09"/>
+<rect x=".5" y=".5" width="599" height="719" rx="22" fill="none" stroke="#e0dacb"/>
+<rect class="edge" x=".5" y=".5" width="599" height="719" rx="22" fill="none" stroke="#9a6408" stroke-opacity=".7" stroke-width="1.5"/>
+</svg>

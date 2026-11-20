@@ -1,4 +1,4 @@
-name: Rebuild profile (brain, data card, project cards)
+name: Rebuild profile (brain and section tiles)
 
 on:
   schedule:
@@ -36,7 +36,7 @@ jobs:
       - name: Draw
         run: |
           node scripts/brain.mjs
-          node scripts/cards.mjs
+          node scripts/sections.mjs
           node scripts/readme.mjs
       - name: Commit if anything changed
         run: |

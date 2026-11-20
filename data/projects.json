@@ -18,25 +18,29 @@
       "name": "Orbital Browser",
       "link": "https://orbitalbrowser.com",
       "line": "The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click.",
-      "status": "Coming soon, waitlist open"
+      "status": "Coming soon, waitlist open",
+      "shot": "orbital.webp"
     },
     {
       "name": "Rootaxe",
       "link": "https://rootaxe.com",
       "line": "Control your Mac from your iPhone, Apple Watch and AirPods.",
-      "status": "Not out yet, early access open"
+      "status": "Not out yet, early access open",
+      "shot": "rootaxe.webp"
     },
     {
       "name": "Nebulaform",
       "link": "https://nebulaform.vercel.app",
       "line": "Describe a form and it builds itself: fields, validation, a shareable link and the responses.",
-      "status": "Live"
+      "status": "Live",
+      "shot": "nebulaform.webp"
     },
     {
       "name": "Lookout",
       "link": "https://lookout.neurobaselabs.com",
       "line": "One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source.",
-      "status": "Early access"
+      "status": "Early access",
+      "shot": "lookout.webp"
     }
   ],
   "openSource": [
@@ -46,7 +50,8 @@
       "line": "A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict.",
       "links": {
         "site": "https://supershary.github.io/claude-council/"
-      }
+      },
+      "shot": "council.webp"
     },
     {
       "repo": "verdict-proof",
@@ -55,7 +60,8 @@
       "links": {
         "live": "https://verdict-chi-one.vercel.app",
         "film": "https://youtu.be/FGKhSeXxdio"
-      }
+      },
+      "shot": "verdict.webp"
     }
   ],
   "more": [
@@ -98,5 +104,48 @@
     "discord": "https://discord.gg/HyWFsTt8th",
     "linkedin": "https://www.linkedin.com/in/supershary",
     "x": "https://x.com/supersharyai"
-  }
+  },
+  "portfolio": {
+    "live": false,
+    "url": ""
+  },
+  "pills": [
+    {
+      "key": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/supershary"
+    },
+    {
+      "key": "youtube",
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@SuperSharyG63"
+    },
+    {
+      "key": "instagram",
+      "label": "Instagram",
+      "url": "https://www.instagram.com/supershary.ai"
+    },
+    {
+      "key": "discord",
+      "label": "Discord",
+      "url": "https://discord.gg/HyWFsTt8th"
+    },
+    {
+      "key": "x",
+      "label": "X",
+      "url": "https://x.com/supersharyai"
+    },
+    {
+      "key": "cars",
+      "label": "Cars on YouTube",
+      "url": "https://www.youtube.com/@Shagunchoudharyrocks"
+    }
+  ],
+  "flow": [
+    "arrives",
+    "read",
+    "matched",
+    "approved",
+    "posted"
+  ]
 }

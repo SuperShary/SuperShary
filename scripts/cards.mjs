@@ -53,7 +53,10 @@ function dataCard(theme) {
     const y = py + 140 - h;
     const top = m.count === maxM;
     o.push(`<rect class="grow" style="animation-delay:${(i * 0.05).toFixed(2)}s" x="${(x + 4).toFixed(1)}" y="${y.toFixed(1)}" width="${(bw - 8).toFixed(1)}" height="${h.toFixed(1)}" rx="3" fill="${top ? t.accent : t.dim}"/>`);
-    if (top) o.push(`<text class="m in" x="${(x + bw / 2).toFixed(1)}" y="${(y - 6).toFixed(1)}" font-size="11" text-anchor="middle" fill="${t.text}">${m.count}</text>`);
+    // The busiest month is labelled; in the last two columns the label goes inside
+    // the bar so it never runs into the year total in the corner.
+    const inside = top && i >= months.length - 2 && h > 24;
+    if (top) o.push(`<text class="m in" x="${(x + bw / 2).toFixed(1)}" y="${(inside ? y + 15 : y - 6).toFixed(1)}" font-size="11" text-anchor="middle" fill="${inside ? t.bg : t.text}">${m.count}</text>`);
     const label = new Date(m.month + "-01T00:00:00Z").toLocaleDateString("en-GB", { month: "short", timeZone: "UTC" });
     o.push(`<text class="m" x="${(x + bw / 2).toFixed(1)}" y="${py + 160}" font-size="10" text-anchor="middle" fill="${t.muted}">${label}</text>`);
   });

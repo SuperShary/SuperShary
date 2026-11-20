@@ -12,7 +12,12 @@ const gh = live.github;
 
 const TW = 600, PAD = 36, IMG = 375;
 const fmt = (n) => (n == null ? "n/a" : n.toLocaleString("en-US"));
-const compact = (v) => (v == null ? "n/a" : v >= 1e6 ? (v / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : v >= 1e4 ? Math.round(v / 1e3) + "K" : v.toLocaleString("en-US"));
+// Floors like everything else on the page: 54,567 shows as 54K, never 55K.
+const compact = (v) => (v == null ? "n/a" : v >= 1e6 ? (Math.floor(v / 1e5) / 10).toFixed(1).replace(/\.0$/, "") + "M" : v >= 1e4 ? Math.floor(v / 1e3) + "K" : v.toLocaleString("en-US"));
+// Floors, never rounds up: 1,298,853 is "1.29M+", not "1.3M+".
+const floorM = (v, digits) => { const f = 10 ** digits; return (Math.floor((v / 1e6) * f) / f).toFixed(digits).replace(/\.?0+$/, "") + "M+"; };
+const floorK = (v) => Math.floor(v / 1e3) + "K+";
+const atLeast = (v, digits = 1) => (v >= 1e6 ? floorM(v, digits) : floorK(v));
 const day = (iso) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
 const css = `<style>.s{font-family:${SANS}}.m{font-family:${MONO}}
 .pulse{animation:p 2.4s ease-in-out infinite}@keyframes p{50%{opacity:.35}}
@@ -101,7 +106,7 @@ function nowTile(theme, H) {
 }
 
 // ---------- numbers (one row, same height) ----------
-const NUM_H = 720;
+const NUM_H = 820;
 function yearTile(theme) {
   const t = THEMES[theme];
   const o = [kicker(t, PAD, 62, "Last 365 days"),
@@ -123,8 +128,13 @@ function yearTile(theme) {
 }
 function reachTile(theme) {
   const t = THEMES[theme];
-  const o = [kicker(t, PAD, 62, "Reach")];
-  let y = 120;
+  // One headline across everything we can verify: live YouTube totals plus the
+  // hand-set Instagram views. It moves up on its own as the numbers grow.
+  const total = live.youtube.reduce((n, v) => n + (v.views || 0), 0) + (projects.instagramReach || []).reduce((n, ig) => n + (ig.views || 0), 0);
+  const o = [kicker(t, PAD, 62, "Reach"),
+    `<text class="s" x="${PAD}" y="124" font-size="46" font-weight="700" letter-spacing="-1" fill="${t.text}">${atLeast(total)} <tspan font-size="24" font-weight="400" fill="${t.muted}">views across YouTube and Instagram</tspan></text>`,
+    `<rect x="${PAD}" y="150" width="${TW - PAD * 2}" height="1" fill="${t.line}"/>`];
+  let y = 200;
   for (const c of projects.channels) {
     const yt = live.youtube.find((v) => v.handle === c.handle) || {};
     o.push(`<text class="s" x="${PAD}" y="${y}" font-size="28" font-weight="700" fill="${t.text}">${esc(c.name)}</text><text class="s" x="${PAD}" y="${y + 28}" font-size="18" fill="${t.muted}">youtube.com/@${esc(c.handle)}</text>`);
@@ -138,18 +148,19 @@ function reachTile(theme) {
   // with the date they were read, and the daily fetch never touches them.
   for (const ig of projects.instagramReach || []) {
     o.push(`<text class="s" x="${PAD}" y="${y}" font-size="28" font-weight="700" fill="${t.text}">@${esc(ig.handle)}</text><text class="s" x="${PAD}" y="${y + 28}" font-size="18" fill="${t.muted}">${esc(fits(`Instagram · ${ig.line}`, 18, TW - PAD * 2, ig.handle))}</text>`);
-    ig.stats.forEach(({ value, label }, i) => {
+    [{ value: atLeast(ig.views, 2), label: "views" }, ...ig.stats].forEach(({ value, label }, i) => {
       const x = PAD + i * 176;
       o.push(`<text class="s" x="${x}" y="${y + 84}" font-size="40" font-weight="700" fill="${t.accent}">${esc(value)}</text><text class="s" x="${x}" y="${y + 112}" font-size="19" fill="${t.muted}">${esc(fits(label, 19, 168, ig.handle))}</text>`);
     });
     y += 150;
-    o.push(`<text class="s" x="${PAD}" y="${y}" font-size="17" fill="${t.faint}">Instagram numbers as of ${day(ig.asOf)} ${ig.asOf.slice(0, 4)}</text>`);
-    y += 20;
+    const note = wrap(`Views from the ${ig.viewsNote}; top reel ${ig.topReel.toLocaleString("en-US")}. Instagram numbers as of ${day(ig.asOf)} ${ig.asOf.slice(0, 4)}.`, 17, TW - PAD * 2, 2, ig.handle);
+    note.forEach((l, i) => o.push(`<text class="s" x="${PAD}" y="${y + i * 24}" font-size="17" fill="${t.faint}">${esc(l)}</text>`));
+    y += 20 + (note.length - 1) * 24;
   }
   if (y > NUM_H - 80) throw new Error(`reach tile: content (${y}) runs into the footer`);
   o.push(`<text class="s" x="${PAD}" y="${NUM_H - 50}" font-size="21" fill="${t.muted}">GitHub: <tspan fill="${t.text}" font-weight="700">${gh.publicRepos}</tspan> public repos · <tspan fill="${t.text}" font-weight="700">${gh.stars}</tspan> stars</text>`);
-  const igAlt = (projects.instagramReach || []).map((ig) => ` Instagram @${ig.handle} (${ig.line}), as of ${ig.asOf}: ${ig.stats.map((x) => `${x.value} ${x.label}`).join(", ")}.`).join("");
-  return frame(theme, NUM_H, `YouTube reach: ${live.youtube.map((y) => `${y.title}, ${y.subscribers} subscribers`).join("; ")}.${igAlt}`, { main: o.join("\n") });
+  const igAlt = (projects.instagramReach || []).map((ig) => ` Instagram @${ig.handle} (${ig.line}), as of ${ig.asOf}: ${atLeast(ig.views, 2)} views from the ${ig.viewsNote}, ${ig.stats.map((x) => `${x.value} ${x.label}`).join(", ")}.`).join("");
+  return frame(theme, NUM_H, `${atLeast(total)} views across YouTube and Instagram. YouTube reach: ${live.youtube.map((y) => `${y.title}, ${y.subscribers} subscribers`).join("; ")}.${igAlt}`, { main: o.join("\n") });
 }
 
 // ---------- pills ----------

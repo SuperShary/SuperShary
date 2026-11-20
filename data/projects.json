@@ -161,10 +161,6 @@
       "asOf": "2026-11-20",
       "stats": [
         {
-          "value": "1.2M+",
-          "label": "views on one reel"
-        },
-        {
           "value": "493",
           "label": "followers"
         },
@@ -173,7 +169,10 @@
           "label": "posts"
         }
       ],
-      "source": "Hand-set, not pulled: views from Meta Business Suite (top reel 1,196,229), followers and posts from the public profile, both read 2026-11-20."
+      "source": "Hand-set, not pulled: views = sum of the 15 most recent reels in Meta Business Suite (top reel 1,196,229), read 2026-11-20 20:10 IST; followers and posts from the public profile, read 2026-11-20.",
+      "views": 1298853,
+      "viewsNote": "15 most recent reels",
+      "topReel": 1196229
     }
   ]
 }

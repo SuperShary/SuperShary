@@ -101,7 +101,7 @@ function nowTile(theme, H) {
 }
 
 // ---------- numbers (one row, same height) ----------
-const NUM_H = 560;
+const NUM_H = 720;
 function yearTile(theme) {
   const t = THEMES[theme];
   const o = [kicker(t, PAD, 62, "Last 365 days"),
@@ -114,7 +114,7 @@ function yearTile(theme) {
   const months = gh.months.slice(-12), max = Math.max(...months.map((m) => m.count), 1);
   const bw = (TW - PAD * 2) / months.length, base = NUM_H - 70;
   months.forEach((m, i) => {
-    const h = Math.max(3, (m.count / max) * 170), x = PAD + i * bw;
+    const h = Math.max(3, (m.count / max) * (base - 360)), x = PAD + i * bw;
     o.push(`<rect x="${(x + 5).toFixed(1)}" y="${(base - h).toFixed(1)}" width="${(bw - 10).toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${m.count === max ? t.accent : t.faint}"/>`);
     const label = new Date(m.month + "-01T00:00:00Z").toLocaleDateString("en-GB", { month: "narrow", timeZone: "UTC" });
     o.push(`<text class="s" x="${(x + bw / 2).toFixed(1)}" y="${base + 30}" font-size="17" text-anchor="middle" fill="${t.muted}">${label}</text>`);
@@ -134,8 +134,22 @@ function reachTile(theme) {
     });
     y += 170;
   }
+  // Instagram has no keyless API: these numbers are hand-set in data/projects.json
+  // with the date they were read, and the daily fetch never touches them.
+  for (const ig of projects.instagramReach || []) {
+    o.push(`<text class="s" x="${PAD}" y="${y}" font-size="28" font-weight="700" fill="${t.text}">@${esc(ig.handle)}</text><text class="s" x="${PAD}" y="${y + 28}" font-size="18" fill="${t.muted}">${esc(fits(`Instagram · ${ig.line}`, 18, TW - PAD * 2, ig.handle))}</text>`);
+    ig.stats.forEach(({ value, label }, i) => {
+      const x = PAD + i * 176;
+      o.push(`<text class="s" x="${x}" y="${y + 84}" font-size="40" font-weight="700" fill="${t.accent}">${esc(value)}</text><text class="s" x="${x}" y="${y + 112}" font-size="19" fill="${t.muted}">${esc(fits(label, 19, 168, ig.handle))}</text>`);
+    });
+    y += 150;
+    o.push(`<text class="s" x="${PAD}" y="${y}" font-size="17" fill="${t.faint}">Instagram numbers as of ${day(ig.asOf)} ${ig.asOf.slice(0, 4)}</text>`);
+    y += 20;
+  }
+  if (y > NUM_H - 80) throw new Error(`reach tile: content (${y}) runs into the footer`);
   o.push(`<text class="s" x="${PAD}" y="${NUM_H - 50}" font-size="21" fill="${t.muted}">GitHub: <tspan fill="${t.text}" font-weight="700">${gh.publicRepos}</tspan> public repos · <tspan fill="${t.text}" font-weight="700">${gh.stars}</tspan> stars</text>`);
-  return frame(theme, NUM_H, `YouTube reach: ${live.youtube.map((y) => `${y.title}, ${y.subscribers} subscribers`).join("; ")}.`, { main: o.join("\n") });
+  const igAlt = (projects.instagramReach || []).map((ig) => ` Instagram @${ig.handle} (${ig.line}), as of ${ig.asOf}: ${ig.stats.map((x) => `${x.value} ${x.label}`).join(", ")}.`).join("");
+  return frame(theme, NUM_H, `YouTube reach: ${live.youtube.map((y) => `${y.title}, ${y.subscribers} subscribers`).join("; ")}.${igAlt}`, { main: o.join("\n") });
 }
 
 // ---------- pills ----------

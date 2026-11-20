@@ -8,7 +8,7 @@
 
 </div>
 
-AI and product at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.
+Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.
 
 ### Now building
 

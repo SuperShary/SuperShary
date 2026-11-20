@@ -243,7 +243,7 @@ function render(theme) {
   out.push(`<g class="fade">
     <text class="mono" x="56" y="64" font-size="13" letter-spacing="3" fill="${t.accent}">NEURAL MAP · LAST ${days.length} DAYS</text>
     <text class="sans" x="54" y="116" font-size="46" font-weight="800" letter-spacing="1" fill="${t.text}">Shagun Choudhary</text>
-    <g clip-path="url(#typeClip)"><text class="mono" x="56" y="172" font-size="19" fill="${t.muted}">AI and product · Proxsoft</text></g>
+    <g clip-path="url(#typeClip)"><text class="mono" x="56" y="172" font-size="19" fill="${t.muted}">Founder's Office, AI &amp; GTM at Proxsoft</text></g>
     <text class="sans" x="56" y="208" font-size="19" fill="${t.text}">I build AI agents that do real work.</text>
   </g>`);
   const stats = [

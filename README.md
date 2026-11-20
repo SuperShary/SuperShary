@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,401 contributions." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,406 contributions." src="assets/brain-dark.svg" width="100%"></picture>
 
 <a href="https://www.linkedin.com/in/supershary"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-linkedin-light.svg"><img alt="LinkedIn" src="assets/v5/pill-linkedin-dark.svg" height="40"></picture></a>
 <a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-youtube-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-youtube-light.svg"><img alt="YouTube" src="assets/v5/pill-youtube-dark.svg" height="40"></picture></a>
@@ -33,7 +33,7 @@
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,401 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,406 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/reach-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/reach-light.svg"><img alt="YouTube reach and GitHub numbers" src="assets/v5/reach-dark.svg" width="400"></picture>
 
 <picture>

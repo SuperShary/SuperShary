@@ -4,6 +4,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const live = JSON.parse(await readFile("data/live.json", "utf8"));
 const projects = JSON.parse(await readFile("data/projects.json", "utf8"));
+const now = JSON.parse(await readFile("data/now.json", "utf8"));
 const user = live.user;
 const repos = live.github.repos;
 
@@ -30,7 +31,7 @@ ${pills.map((p) => `<a href="${p.url}">${pic(`v5/pill-${p.key}`, p.label, 'heigh
 <p>${projects.intro.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')}</p>
 
 ${tile("v5/proxsoft", `At Proxsoft: ${projects.proxsoft.map((p) => `${p.name}, ${p.status}`).join("; ")}`, foremind)}
-${tile("v5/now", "Now building")}
+${tile("v5/now", `Now building: ${now.items.join(" ")}`)}
 
 <br/>
 

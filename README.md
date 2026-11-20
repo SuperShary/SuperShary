@@ -14,7 +14,7 @@
 <p>Founder's Office, AI & GTM at <a href="https://proxsoftglobal.com">Proxsoft</a>. I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.</p>
 
 <a href="https://proxsoftglobal.com/foremind-ap-automation/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/proxsoft-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/proxsoft-light.svg"><img alt="At Proxsoft: Nexus, In production; Foremind, Shown in live demos" src="assets/v5/proxsoft-dark.svg" width="400"></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/now-light.svg"><img alt="Now building" src="assets/v5/now-dark.svg" width="400"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/now-light.svg"><img alt="Now building: Proxsoft: a marketplace of AI agents for construction finance, not a single tool. AP automation is the first agent, and it is live. Orbital Browser: coming soon, with the waitlist open. Rootaxe: not out yet, early access open. Lookout: early access open." src="assets/v5/now-dark.svg" width="400"></picture>
 
 <br/>
 

@@ -10,7 +10,7 @@ const style = `<style>.s{font-family:${SANS}}.m{font-family:${MONO}}.pulse{anima
 export function productTile(theme, p) {
   const t = THEMES[theme];
   const W = 600, IMG = 375, pad = 32;
-  const lines = wrap(p.line, 23, W - pad * 2, 3, p.name);
+  const lines = wrap(p.line, 23, W - pad * 2, 4, p.name);
   const H = IMG + 150 + lines.length * 32;
   const o = [];
   o.push(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(`${p.name}. ${p.status}. ${p.line}`)}">${style}`);

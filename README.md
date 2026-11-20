@@ -10,11 +10,11 @@
 
 AI and product at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.
 
-### Now building <sub>· week of 20 Nov 2026</sub>
+### Now building
 
 - Proxsoft: a marketplace of AI agents for construction finance, not a single tool. AP automation is the first agent, and it is live.
-- Orbital Browser: getting the preview ready for the waitlist.
-- Nebulaform: sign-up is now open to everyone.
+- Orbital Browser: coming soon, with the waitlist open.
+- Rootaxe: not out yet, early access open.
 
 ### At Proxsoft
 
@@ -25,15 +25,13 @@ AI and product at [Proxsoft](https://proxsoftglobal.com). I build AI agents for 
 
 - **[Orbital Browser](https://orbitalbrowser.com)** · *Coming soon, waitlist open*<br>The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click.
 - **[Rootaxe](https://rootaxe.com)** · *Not out yet, early access open*<br>Control your Mac from your iPhone, Apple Watch and AirPods.
-- **[Nebulaform](https://nebulaform.vercel.app)** · *Live, sign-up open*<br>Describe a form and it builds itself: fields, validation, a shareable link and the responses.
+- **[Nebulaform](https://nebulaform.vercel.app)** · *Live*<br>Describe a form and it builds itself: fields, validation, a shareable link and the responses.
 - **[Lookout](https://lookout.neurobaselabs.com)** · *Early access*<br>One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source.
 
 ### Open source
 
 - **[Claude Council](https://github.com/SuperShary/claude-council)** · ★ 2 · [site](https://supershary.github.io/claude-council/)<br>A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict.
 - **[Verdict](https://github.com/SuperShary/verdict-proof)** · [live](https://verdict-chi-one.vercel.app) · [film](https://youtu.be/FGKhSeXxdio)<br>Invoice PDF in, a reasoned approve, hold, reject or block decision out, proven with a seeded stress test.
-
-<sub>More public repos: [multi-agent-invoice-reconciliation-system](https://github.com/SuperShary/multi-agent-invoice-reconciliation-system) · [Building-an-AI-agent-Chrome-extension](https://github.com/SuperShary/Building-an-AI-agent-Chrome-extension) · [Holospeed](https://github.com/SuperShary/Holospeed) · [Lamborgini](https://github.com/SuperShary/Lamborgini) · [monsterenergy](https://github.com/SuperShary/monsterenergy) · [beyondchats](https://github.com/SuperShary/beyondchats) · [Resume-Analyzer-Pro](https://github.com/SuperShary/Resume-Analyzer-Pro) · [infocream_web](https://github.com/SuperShary/infocream_web) · [nexuspredictai](https://github.com/SuperShary/nexuspredictai) · [cinematch](https://github.com/SuperShary/cinematch) · [aidoctor](https://github.com/SuperShary/aidoctor) · [jbl](https://github.com/SuperShary/jbl) · [FluxColab](https://github.com/SuperShary/FluxColab) · [jarvis](https://github.com/SuperShary/jarvis)</sub>
 
 ### Channels
 

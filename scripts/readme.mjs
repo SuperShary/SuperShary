@@ -46,7 +46,7 @@ ${oss.join("\n")}
 <br/>
 
 ${tile("v5/year", `${fmt(live.github.total)} contributions in the last 365 days`)}
-${tile("v5/reach", "YouTube reach and GitHub numbers")}
+${tile("v5/reach", "Reach: YouTube, Instagram and GitHub numbers")}
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/${user}/${user}/output/github-snake-dark.svg" />

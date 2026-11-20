@@ -111,19 +111,24 @@
   },
   "pills": [
     {
-      "key": "linkedin",
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/supershary"
-    },
-    {
-      "key": "youtube",
-      "label": "YouTube",
+      "key": "yt-supershary",
+      "label": "YouTube · SuperShary",
       "url": "https://www.youtube.com/@SuperSharyG63"
     },
     {
-      "key": "instagram",
-      "label": "Instagram",
-      "url": "https://www.instagram.com/supershary.ai"
+      "key": "yt-shagun",
+      "label": "YouTube · Shagun Choudhary",
+      "url": "https://www.youtube.com/@Shagunchoudharyrocks"
+    },
+    {
+      "key": "ig-aiwalivideos",
+      "label": "Instagram · @aiwalivideos",
+      "url": "https://www.instagram.com/aiwalivideos/"
+    },
+    {
+      "key": "ig-supershary",
+      "label": "Instagram · @supershary.ai",
+      "url": "https://www.instagram.com/supershary.ai/"
     },
     {
       "key": "discord",
@@ -131,14 +136,14 @@
       "url": "https://discord.gg/HyWFsTt8th"
     },
     {
+      "key": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/supershary"
+    },
+    {
       "key": "x",
       "label": "X",
       "url": "https://x.com/supersharyai"
-    },
-    {
-      "key": "cars",
-      "label": "Cars on YouTube",
-      "url": "https://www.youtube.com/@Shagunchoudharyrocks"
     }
   ],
   "flow": [
@@ -147,5 +152,28 @@
     "matched",
     "approved",
     "posted"
+  ],
+  "instagramReach": [
+    {
+      "handle": "aiwalivideos",
+      "url": "https://www.instagram.com/aiwalivideos/",
+      "line": "Side project: AI story reels in Hindi",
+      "asOf": "2026-11-20",
+      "stats": [
+        {
+          "value": "1.2M+",
+          "label": "views on one reel"
+        },
+        {
+          "value": "493",
+          "label": "followers"
+        },
+        {
+          "value": "20",
+          "label": "posts"
+        }
+      ],
+      "source": "Hand-set, not pulled: views from Meta Business Suite (top reel 1,196,229), followers and posts from the public profile, both read 2026-11-20."
+    }
   ]
 }

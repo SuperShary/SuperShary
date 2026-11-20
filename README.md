@@ -4,12 +4,13 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,406 contributions." src="assets/brain-dark.svg" width="100%"></picture>
 
-<a href="https://www.linkedin.com/in/supershary"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-linkedin-light.svg"><img alt="LinkedIn" src="assets/v5/pill-linkedin-dark.svg" height="40"></picture></a>
-<a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-youtube-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-youtube-light.svg"><img alt="YouTube" src="assets/v5/pill-youtube-dark.svg" height="40"></picture></a>
-<a href="https://www.instagram.com/supershary.ai"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-instagram-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-instagram-light.svg"><img alt="Instagram" src="assets/v5/pill-instagram-dark.svg" height="40"></picture></a>
+<a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-yt-supershary-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-yt-supershary-light.svg"><img alt="YouTube · SuperShary" src="assets/v5/pill-yt-supershary-dark.svg" height="40"></picture></a>
+<a href="https://www.youtube.com/@Shagunchoudharyrocks"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-yt-shagun-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-yt-shagun-light.svg"><img alt="YouTube · Shagun Choudhary" src="assets/v5/pill-yt-shagun-dark.svg" height="40"></picture></a>
+<a href="https://www.instagram.com/aiwalivideos/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-ig-aiwalivideos-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-ig-aiwalivideos-light.svg"><img alt="Instagram · @aiwalivideos" src="assets/v5/pill-ig-aiwalivideos-dark.svg" height="40"></picture></a>
+<a href="https://www.instagram.com/supershary.ai/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-ig-supershary-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-ig-supershary-light.svg"><img alt="Instagram · @supershary.ai" src="assets/v5/pill-ig-supershary-dark.svg" height="40"></picture></a>
 <a href="https://discord.gg/HyWFsTt8th"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-discord-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-discord-light.svg"><img alt="Discord" src="assets/v5/pill-discord-dark.svg" height="40"></picture></a>
+<a href="https://www.linkedin.com/in/supershary"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-linkedin-light.svg"><img alt="LinkedIn" src="assets/v5/pill-linkedin-dark.svg" height="40"></picture></a>
 <a href="https://x.com/supersharyai"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-x-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-x-light.svg"><img alt="X" src="assets/v5/pill-x-dark.svg" height="40"></picture></a>
-<a href="https://www.youtube.com/@Shagunchoudharyrocks"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-cars-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-cars-light.svg"><img alt="Cars on YouTube" src="assets/v5/pill-cars-dark.svg" height="40"></picture></a>
 
 <p>Founder's Office, AI & GTM at <a href="https://proxsoftglobal.com">Proxsoft</a>. I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.</p>
 
@@ -34,7 +35,7 @@
 <br/>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,406 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/reach-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/reach-light.svg"><img alt="YouTube reach and GitHub numbers" src="assets/v5/reach-dark.svg" width="400"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/reach-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/reach-light.svg"><img alt="Reach: YouTube, Instagram and GitHub numbers" src="assets/v5/reach-dark.svg" width="400"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" />

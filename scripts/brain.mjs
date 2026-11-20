@@ -10,8 +10,8 @@ import { readFile, writeFile } from "node:fs/promises";
 const live = JSON.parse(await readFile("data/live.json", "utf8"));
 const gh = live.github;
 
-const W = 1200, H = 690;
-const CX = 790, CY = 335, S = 610;   // brain centre and scale: the brain is the hero, ~60% of the width
+const W = 1200, H = 640;
+const CX = 885, CY = 318, S = 500;   // brain centre and scale: the brain fills the right half
 const FLOOR = CY + 0.47 * S;         // the orbit rings sit under the brain stem
 const T = 40;                        // seconds per full turn
 const TILT = (12 * Math.PI) / 180;   // we look at it slightly from above
@@ -131,12 +131,12 @@ const proj = nodes.map((n) => project(n.p));
 // ---------- themes ----------
 const THEMES = {
   dark: {
-    bg: "#0b0f14", grid: "#12202a", text: "#E6FDFF", muted: "#8aa3ad", accent: "#22D3EE", faint: "#36515c",
-    levels: ["#2b6a7c", "#13a3c2", "#22D3EE", "#7ee8fa", "#f0feff"], edge: "#22D3EE", pulse: "#f0feff", glow: "#22D3EE",
+    bg: "#07070a", grid: "#141318", text: "#f5f2ea", muted: "#a8a49b", accent: "#e9b44c", faint: "#3a352b",
+    levels: ["#4a3b1f", "#8a6726", "#c99536", "#e9b44c", "#fff3d6"], edge: "#e9b44c", pulse: "#fff3d6", glow: "#e9b44c",
   },
   light: {
-    bg: "#f5fafc", grid: "#e1eef2", text: "#0b2a33", muted: "#4f6b75", accent: "#0891b2", faint: "#a9c6cf",
-    levels: ["#b9dbe3", "#67c3d6", "#0ea5c6", "#0e7490", "#083c4a"], edge: "#0e7490", pulse: "#0891b2", glow: "#22D3EE",
+    bg: "#f5f2ea", grid: "#e6e0d2", text: "#0b0a09", muted: "#5b5750", accent: "#9a6408", faint: "#c9bfa9",
+    levels: ["#ddd0b2", "#cfa95c", "#b07a1a", "#8a5d12", "#3d2a08"], edge: "#8a5d12", pulse: "#9a6408", glow: "#e9b44c",
   },
 };
 
@@ -152,17 +152,11 @@ function render(theme) {
   out.push(`<style>
     .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-    .caret{animation:blink 1s steps(1) infinite}
-    @keyframes blink{50%{opacity:0}}
-    .type{animation:type 2.6s steps(44) .4s both}
-    @keyframes type{from{width:0}to{width:560px}}
     .orbit{transform-origin:${CX}px ${FLOOR}px;animation:spin 24s linear infinite}
     .orbit2{transform-origin:${CX}px ${FLOOR}px;animation:spin 36s linear infinite reverse}
     @keyframes spin{to{transform:rotate(360deg)}}
     .scan{animation:scan 7s ease-in-out infinite}
     @keyframes scan{0%{transform:translateY(-40px);opacity:0}15%{opacity:.5}85%{opacity:.5}100%{transform:translateY(${H - 40}px);opacity:0}}
-    .fade{animation:fade 1.4s ease-out both}
-    @keyframes fade{from{opacity:0;transform:translateY(8px)}}
   </style>`);
   out.push(`<defs>
     <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="${t.grid}"/></pattern>
@@ -170,12 +164,11 @@ function render(theme) {
     <radialGradient id="scanG" cx="50%" cy="100%" r="50%" gradientTransform="translate(0 .5) scale(1 .5) translate(0 -.5)"><stop offset="0" stop-color="${t.accent}" stop-opacity=".28"/><stop offset="1" stop-color="${t.accent}" stop-opacity="0"/></radialGradient>
     <linearGradient id="scanL"><stop offset="0" stop-color="${t.accent}" stop-opacity="0"/><stop offset=".5" stop-color="${t.accent}" stop-opacity=".7"/><stop offset="1" stop-color="${t.accent}" stop-opacity="0"/></linearGradient>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <clipPath id="typeClip"><rect class="type" x="56" y="150" width="560" height="30"/></clipPath>
   </defs>`);
   out.push(`<rect width="${W}" height="${H}" rx="18" fill="${t.bg}"/><rect width="${W}" height="${H}" rx="18" fill="url(#dots)"/>`);
-  out.push(`<ellipse cx="${CX}" cy="${CY}" rx="470" ry="330" fill="url(#halo)"/>`);
+  out.push(`<ellipse cx="${CX}" cy="${CY}" rx="390" ry="280" fill="url(#halo)"/>`);
   // floor rings
-  out.push(`<g fill="none" stroke="${t.accent}"><ellipse class="orbit" cx="${CX}" cy="${FLOOR}" rx="330" ry="44" stroke-opacity=".35" stroke-dasharray="2 10"/><ellipse class="orbit2" cx="${CX}" cy="${FLOOR}" rx="400" ry="58" stroke-opacity=".18" stroke-dasharray="40 14 4 14"/></g>`);
+  out.push(`<g fill="none" stroke="${t.accent}"><ellipse class="orbit" cx="${CX}" cy="${FLOOR}" rx="270" ry="36" stroke-opacity=".35" stroke-dasharray="2 10"/><ellipse class="orbit2" cx="${CX}" cy="${FLOOR}" rx="330" ry="46" stroke-opacity=".18" stroke-dasharray="40 14 4 14"/></g>`);
 
   // synapses
   out.push(`<g stroke="${t.edge}" stroke-width="1.1" stroke-opacity="${theme === "dark" ? 0.3 : 0.34}" fill="none">`);
@@ -237,32 +230,24 @@ function render(theme) {
   if (busiestIdx >= 0 && busiestIdx !== days.length - 1) out.push(marker(busiestIdx, `${fmtDay(gh.busiest.date)} · ${gh.busiest.count}`, -1.2, true));
 
   // scan line
-  out.push(`<g class="scan"><rect x="${CX - 420}" y="0" width="840" height="40" fill="url(#scanG)"/><line x1="${CX - 380}" x2="${CX + 380}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);
+  out.push(`<g class="scan"><rect x="${CX - 340}" y="0" width="680" height="40" fill="url(#scanG)"/><line x1="${CX - 300}" x2="${CX + 300}" y1="40" y2="40" stroke="url(#scanL)" stroke-width="1"/></g>`);
 
-  // HUD: left column
-  out.push(`<g class="fade">
-    <text class="mono" x="56" y="64" font-size="13" letter-spacing="3" fill="${t.accent}">NEURAL MAP · LAST ${days.length} DAYS</text>
-    <text class="sans" x="54" y="116" font-size="46" font-weight="800" letter-spacing="1" fill="${t.text}">Shagun Choudhary</text>
-    <g clip-path="url(#typeClip)"><text class="mono" x="56" y="172" font-size="19" fill="${t.muted}">Founder's Office, AI &amp; GTM at Proxsoft</text></g>
-    <text class="sans" x="56" y="208" font-size="19" fill="${t.text}">I build AI agents that do real work.</text>
+  // HUD: left column. No entrance animation on text: an image can be captured at frame 0.
+  const stat = (v, l) => `<tspan fill="${t.accent}" font-weight="700">${esc(v)}</tspan> ${esc(l)}`;
+  out.push(`<g class="sans">
+    <text x="56" y="92" font-size="18" letter-spacing="4" fill="${t.accent}" class="mono">365 DAYS · ONE NEURON EACH</text>
+    <text x="54" y="166" font-size="60" font-weight="700" letter-spacing="-1" fill="${t.text}">Shagun Choudhary</text>
+    <text x="56" y="240" font-size="44" font-weight="600" letter-spacing="-0.5" fill="${t.text}">I build AI agents</text>
+    <text x="56" y="294" font-size="44" font-weight="600" letter-spacing="-0.5" fill="${t.accent}">that do real work.</text>
+    <text x="56" y="372" font-size="28" fill="${t.muted}">${stat(fmtN(gh.total), "contributions in the last year")}</text>
+    <text x="56" y="414" font-size="28" fill="${t.muted}">${stat(gh.streak.longest, "day streak")} · ${stat(gh.busiest.count, `on ${fmtDay(gh.busiest.date)}`)}</text>
   </g>`);
-  const stats = [
-    [fmtN(gh.total), "contributions in the last year"],
-    [String(gh.streak.longest), "day longest streak"],
-    [String(gh.streak.current), "day current streak"],
-    [String(gh.busiest.count), `on my busiest day, ${fmtDay(gh.busiest.date)}`],
-  ];
-  stats.forEach(([v, l], i) => {
-    const y = 270 + i * 46;
-    out.push(`<g class="fade" style="animation-delay:${0.5 + i * 0.18}s"><text class="mono" x="56" y="${y}" font-size="30" font-weight="700" fill="${t.accent}">${esc(v)}</text><text class="mono" x="${56 + 18.2 * v.length + 14}" y="${y}" font-size="15" fill="${t.muted}">${esc(l)}</text></g>`);
-  });
   // legend
-  const ly = H - 82;
-  out.push(`<g class="mono" font-size="12" fill="${t.muted}"><text x="56" y="${ly}">1 neuron = 1 day</text>`);
-  t.levels.forEach((c, i) => out.push(`<circle cx="${190 + i * 22}" cy="${ly - 4}" r="${1.5 + i * 0.85}" fill="${c}"/>`));
-  out.push(`<text x="${190 + 5 * 22}" y="${ly}">more commits</text>`);
-  out.push(`<text x="56" y="${ly + 22}">back of the brain = a year ago · front = today</text></g>`);
-  out.push(`<text class="mono" x="${W - 28}" y="${H - 22}" font-size="11" text-anchor="end" fill="${t.muted}">regenerated daily from GitHub · ${live.generatedAt.slice(0, 10)}</text>`);
+  const ly = H - 62;
+  out.push(`<g class="sans" font-size="20" fill="${t.muted}"><text x="56" y="${ly}">Each neuron is one day of my last year.</text>`);
+  out.push(`<text x="56" y="${ly + 30}">Brighter means more commits.</text>`);
+  t.levels.forEach((c, i) => out.push(`<circle cx="${352 + i * 24}" cy="${ly + 23}" r="${2 + i * 1.1}" fill="${c}"/>`));
+  out.push(`</g>`);
   out.push(`</svg>`);
   return out.join("\n");
 }

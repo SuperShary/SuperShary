@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 560" width="600" height="560" role="img" aria-label="YouTube reach: SuperShary | AI Systems, 756 subscribers; Shagun Choudhary 🚗, 1410 subscribers."><style>.s{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',system-ui,Roboto,'Helvetica Neue',Arial,sans-serif}.m{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:p 2.4s ease-in-out infinite}@keyframes p{50%{opacity:.35}}
+.edge{stroke-dasharray:140 2400;animation:e 9s linear infinite}@keyframes e{to{stroke-dashoffset:-2540}}
+.walk{animation:w 7s cubic-bezier(.6,0,.4,1) infinite}</style>
+<defs><clipPath id="c"><rect width="600" height="560" rx="22"/></clipPath></defs>
+<rect width="600" height="560" rx="22" fill="#0e0e12"/>
+
+<text class="m" x="36" y="62" font-size="17" letter-spacing="3" fill="#e9b44c">REACH</text>
+<text class="s" x="36" y="120" font-size="28" font-weight="700" fill="#f5f2ea">SuperShary</text><text class="s" x="36" y="148" font-size="18" fill="#a8a49b">youtube.com/@SuperSharyG63</text>
+<text class="s" x="36" y="204" font-size="40" font-weight="700" fill="#e9b44c">756</text><text class="s" x="36" y="232" font-size="19" fill="#a8a49b">subscribers</text>
+<text class="s" x="212" y="204" font-size="40" font-weight="700" fill="#e9b44c">62</text><text class="s" x="212" y="232" font-size="19" fill="#a8a49b">videos</text>
+<text class="s" x="388" y="204" font-size="40" font-weight="700" fill="#e9b44c">55K</text><text class="s" x="388" y="232" font-size="19" fill="#a8a49b">views</text>
+<text class="s" x="36" y="290" font-size="28" font-weight="700" fill="#f5f2ea">Shagun Choudhary</text><text class="s" x="36" y="318" font-size="18" fill="#a8a49b">youtube.com/@Shagunchoudharyrocks</text>
+<text class="s" x="36" y="374" font-size="40" font-weight="700" fill="#e9b44c">1,410</text><text class="s" x="36" y="402" font-size="19" fill="#a8a49b">subscribers</text>
+<text class="s" x="212" y="374" font-size="40" font-weight="700" fill="#e9b44c">109</text><text class="s" x="212" y="402" font-size="19" fill="#a8a49b">videos</text>
+<text class="s" x="388" y="374" font-size="40" font-weight="700" fill="#e9b44c">452K</text><text class="s" x="388" y="402" font-size="19" fill="#a8a49b">views</text>
+<text class="s" x="36" y="510" font-size="21" fill="#a8a49b">GitHub: <tspan fill="#f5f2ea" font-weight="700">20</tspan> public repos · <tspan fill="#f5f2ea" font-weight="700">21</tspan> stars</text>
+<rect x=".5" y=".5" width="599" height="559" rx="22" fill="none" stroke="#24232a"/>
+<rect class="edge" x=".5" y=".5" width="599" height="559" rx="22" fill="none" stroke="#e9b44c" stroke-opacity=".7" stroke-width="1.5"/>
+</svg>

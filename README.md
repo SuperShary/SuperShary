@@ -2,62 +2,39 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 4,401 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,401 contributions." src="assets/brain-dark.svg" width="100%"></picture>
 
-[YouTube](https://www.youtube.com/@SuperSharyG63) · [Instagram](https://www.instagram.com/supershary.ai) · [Discord](https://discord.gg/HyWFsTt8th) · [LinkedIn](https://www.linkedin.com/in/supershary) · [X](https://x.com/supersharyai)
+<a href="https://www.linkedin.com/in/supershary"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-linkedin-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-linkedin-light.svg"><img alt="LinkedIn" src="assets/v5/pill-linkedin-dark.svg" height="40"></picture></a>
+<a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-youtube-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-youtube-light.svg"><img alt="YouTube" src="assets/v5/pill-youtube-dark.svg" height="40"></picture></a>
+<a href="https://www.instagram.com/supershary.ai"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-instagram-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-instagram-light.svg"><img alt="Instagram" src="assets/v5/pill-instagram-dark.svg" height="40"></picture></a>
+<a href="https://discord.gg/HyWFsTt8th"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-discord-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-discord-light.svg"><img alt="Discord" src="assets/v5/pill-discord-dark.svg" height="40"></picture></a>
+<a href="https://x.com/supersharyai"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-x-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-x-light.svg"><img alt="X" src="assets/v5/pill-x-dark.svg" height="40"></picture></a>
+<a href="https://www.youtube.com/@Shagunchoudharyrocks"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-cars-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-cars-light.svg"><img alt="Cars on YouTube" src="assets/v5/pill-cars-dark.svg" height="40"></picture></a>
 
-</div>
+<p>Founder's Office, AI & GTM at <a href="https://proxsoftglobal.com">Proxsoft</a>. I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.</p>
 
-Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.
+<a href="https://proxsoftglobal.com/foremind-ap-automation/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/proxsoft-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/proxsoft-light.svg"><img alt="At Proxsoft: Nexus, In production; Foremind, Shown in live demos" src="assets/v5/proxsoft-dark.svg" width="400"></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/now-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/now-light.svg"><img alt="Now building" src="assets/v5/now-dark.svg" width="400"></picture>
 
-### Now building
+<br/>
 
-- Proxsoft: a marketplace of AI agents for construction finance, not a single tool. AP automation is the first agent, and it is live.
-- Orbital Browser: coming soon, with the waitlist open.
-- Rootaxe: not out yet, early access open.
+<a href="https://orbitalbrowser.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/product-orbital-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/product-orbital-light.svg"><img alt="Orbital Browser: Coming soon, waitlist open. The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click." src="assets/v5/product-orbital-dark.svg" width="400"></picture></a>
+<a href="https://rootaxe.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/product-rootaxe-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/product-rootaxe-light.svg"><img alt="Rootaxe: Not out yet, early access open. Control your Mac from your iPhone, Apple Watch and AirPods." src="assets/v5/product-rootaxe-dark.svg" width="400"></picture></a>
+<br/>
+<a href="https://nebulaform.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/product-nebulaform-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/product-nebulaform-light.svg"><img alt="Nebulaform: Live. Describe a form and it builds itself: fields, validation, a shareable link and the responses." src="assets/v5/product-nebulaform-dark.svg" width="400"></picture></a>
+<a href="https://lookout.neurobaselabs.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/product-lookout-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/product-lookout-light.svg"><img alt="Lookout: Early access. One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source." src="assets/v5/product-lookout-dark.svg" width="400"></picture></a>
 
-### At Proxsoft
+<br/>
 
-- **Nexus** · *In production*<br>AP automation. An invoice arrives by email or upload, gets read and matched to its purchase order, and posts to the ERP only after a person approves.
-- **[Foremind](https://proxsoftglobal.com/foremind-ap-automation/)** · *Shown in live demos*<br>AI agents for construction ERPs. The first module is AP automation: invoices in, matched and ready to approve.
+<a href="https://github.com/SuperShary/claude-council"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/oss-claude-council-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/oss-claude-council-light.svg"><img alt="Claude Council: A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict." src="assets/v5/oss-claude-council-dark.svg" width="400"></picture></a>
+<a href="https://github.com/SuperShary/verdict-proof"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/oss-verdict-proof-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/oss-verdict-proof-light.svg"><img alt="Verdict: Invoice PDF in, a reasoned approve, hold, reject or block decision out, proven with a seeded stress test." src="assets/v5/oss-verdict-proof-dark.svg" width="400"></picture></a>
 
-### My products
+<sub><a href="https://supershary.github.io/claude-council/">Claude Council site</a> · <a href="https://verdict-chi-one.vercel.app">Verdict live</a> · <a href="https://youtu.be/FGKhSeXxdio">Verdict film</a></sub>
 
-- **[Orbital Browser](https://orbitalbrowser.com)** · *Coming soon, waitlist open*<br>The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click.
-- **[Rootaxe](https://rootaxe.com)** · *Not out yet, early access open*<br>Control your Mac from your iPhone, Apple Watch and AirPods.
-- **[Nebulaform](https://nebulaform.vercel.app)** · *Live*<br>Describe a form and it builds itself: fields, validation, a shareable link and the responses.
-- **[Lookout](https://lookout.neurobaselabs.com)** · *Early access*<br>One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source.
+<br/>
 
-### Open source
-
-- **[Claude Council](https://github.com/SuperShary/claude-council)** · ★ 2 · [site](https://supershary.github.io/claude-council/)<br>A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict.
-- **[Verdict](https://github.com/SuperShary/verdict-proof)** · [live](https://verdict-chi-one.vercel.app) · [film](https://youtu.be/FGKhSeXxdio)<br>Invoice PDF in, a reasoned approve, hold, reject or block decision out, proven with a seeded stress test.
-
-### Channels
-
-- **[SuperShary](https://www.youtube.com/@SuperSharyG63)** on YouTube · 756 subscribers<br>Tools, agents and real builds with AI, in Hindi and English.
-- **[Shagun Choudhary](https://www.youtube.com/@Shagunchoudharyrocks)** on YouTube · 1,410 subscribers<br>Car explainers for Indian buyers.
-- **[SuperShary AI Community](https://discord.gg/HyWFsTt8th)** on Discord<br>Questions, builds and job help.
-
-### By the numbers
-
-<div align="center">
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 4,401 contributions in the last year, 43 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
-
-</div>
-
-<sub>A GitHub Action pulls every number from the GitHub API and the public YouTube pages, every day. The contribution count is GitHub's own, which includes private work.</sub>
-
-**Stack:** TypeScript · Next.js · Node · Python · Swift · Electron · Supabase · Azure · Vercel · MCP
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-green.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-green.svg" />
-  <img alt="3D contribution calendar, last year" src="profile-3d-contrib/profile-night-green.svg" width="100%" />
-</picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,401 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/reach-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/reach-light.svg"><img alt="YouTube reach and GitHub numbers" src="assets/v5/reach-dark.svg" width="400"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" />
@@ -65,6 +42,6 @@ Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" width="100%" />
 </picture>
 
-<sub>This profile rebuilds itself every day. The brain and the data card are drawn by <a href="scripts">my own generator</a> (<a href="docs/RESEARCH-v3.md">how it works</a>). Last run 2026-11-20.</sub>
+<sub>Every picture on this page is drawn by <a href="scripts">my own generator</a> and rebuilt every day from GitHub and YouTube numbers. Last run 2026-11-20.</sub>
 
 </div>

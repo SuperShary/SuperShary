@@ -73,12 +73,13 @@ function proxsoftTile(theme, H) {
   projects.flow.forEach((label, i) => {
     const x = x0 + i * gap, mine = i === hold;
     o.push(`<circle cx="${x}" cy="${fy}" r="${mine ? 9 : 6}" fill="${mine ? t.accent : t.faint}"/>`);
-    o.push(`<text class="s" x="${x}" y="${fy + 40}" font-size="20" text-anchor="middle" font-weight="${mine ? 700 : 400}" fill="${mine ? t.accent : t.muted}">${esc(mine ? "a person approves" : label)}</text>`);
+    o.push(`<text class="s" x="${x}" y="${fy + 40}" font-size="20" text-anchor="middle" font-weight="${mine ? 700 : 400}" fill="${mine ? t.accent : t.muted}">${esc(label)}</text>`);
+    if (mine) o.push(`<text class="s" x="${x}" y="${fy - 24}" font-size="20" text-anchor="middle" font-weight="700" fill="${t.accent}">a person decides</text>`);
   });
   const hx = x0 + hold * gap;
   o.push(`<style>@keyframes w{0%{transform:translateX(0)}35%{transform:translateX(${hx - x0}px)}65%{transform:translateX(${hx - x0}px)}100%{transform:translateX(${x1 - x0}px)}}</style>`);
   o.push(`<circle class="walk" cx="${x0}" cy="${fy}" r="5" fill="${t.text}"/>`);
-  if (y - 40 > fy - 50) throw new Error(`proxsoft tile: content (${y}) runs into the flow (${fy})`);
+  if (y - 40 > fy - 74) throw new Error(`proxsoft tile: content (${y}) runs into the flow (${fy})`);
   return frame(theme, H, `At Proxsoft, Founder's Office, AI and GTM. ${projects.proxsoft.map((p) => `${p.name}: ${p.status}. ${p.line}`).join(" ")}`, { main: o.join("\n") });
 }
 
@@ -90,7 +91,8 @@ function nowTile(theme, H) {
     const [name, ...rest] = item.split(": ");
     o.push(`<text class="m" x="${PAD}" y="${y}" font-size="22" font-weight="700" fill="${t.accent}">0${i + 1}</text>`);
     o.push(`<text class="s" x="${PAD + 52}" y="${y}" font-size="30" font-weight="700" fill="${t.text}">${esc(fits(name, 30, TW - PAD * 2 - 52, "now"))}</text>`);
-    const lines = wrap(rest.join(": "), 22, TW - PAD * 2 - 52, 3, `now ${name}`);
+    const text = rest.join(": ");
+    const lines = wrap(text.charAt(0).toUpperCase() + text.slice(1), 22, TW - PAD * 2 - 52, 3, `now ${name}`);
     lines.forEach((l, k) => o.push(`<text class="s" x="${PAD + 52}" y="${y + 36 + k * 30}" font-size="22" fill="${t.muted}">${esc(l)}</text>`));
     y += 36 + lines.length * 30 + 44;
   });

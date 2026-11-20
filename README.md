@@ -2,86 +2,54 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 4298 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="A rotating brain of 365 neurons, one per day of my last year on GitHub. 4,298 contributions; brighter neurons are busier days." src="assets/brain-dark.svg" width="100%"></picture>
 
-<a href="https://www.youtube.com/@SuperSharyG63"><img alt="SuperShary" src="https://img.shields.io/badge/SuperShary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
-<a href="https://www.youtube.com/@Shagunchoudharyrocks"><img alt="Shagun Choudhary" src="https://img.shields.io/badge/Shagun%20Choudhary-0b0f14?style=for-the-badge&logo=youtube&logoColor=22D3EE"></a>
-<a href="https://www.linkedin.com/in/supershary"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0b0f14?style=for-the-badge&logo=linkedin&logoColor=22D3EE"></a>
-<a href="https://x.com/supersharyai"><img alt="X" src="https://img.shields.io/badge/X-0b0f14?style=for-the-badge&logo=x&logoColor=22D3EE"></a>
-<a href="https://www.instagram.com/supershary.ai"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-0b0f14?style=for-the-badge&logo=instagram&logoColor=22D3EE"></a>
+[YouTube](https://www.youtube.com/@SuperSharyG63) · [Instagram](https://www.instagram.com/supershary.ai) · [Discord](https://discord.gg/HyWFsTt8th) · [LinkedIn](https://www.linkedin.com/in/supershary) · [X](https://x.com/supersharyai)
 
 </div>
 
-### ⚡ Building this week <sub>· week of 19 Oct 2026</sub>
+Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.
 
-- Nexus AI: the next release and the new design for the first client
-- SuperShary OS: a team of AI agents running the company's daily work
-- This profile: a generator that turns my last 365 days into a rotating brain
+### Now building
 
-### 📊 Data profile
+- Proxsoft: a marketplace of AI agents for construction finance, not a single tool. AP automation is the first agent, and it is live.
+- Orbital Browser: coming soon, with the waitlist open.
+- Rootaxe: not out yet, early access open.
+
+### At Proxsoft
+
+- **Nexus** · *In production*<br>AP automation. An invoice arrives by email or upload, gets read and matched to its purchase order, and posts to the ERP only after a person approves.
+- **[Foremind](https://proxsoftglobal.com/foremind-ap-automation/)** · *Shown in live demos*<br>AI agents for construction ERPs. The first module is AP automation: invoices in, matched and ready to approve.
+
+### My products
+
+- **[Orbital Browser](https://orbitalbrowser.com)** · *Coming soon, waitlist open*<br>The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click.
+- **[Rootaxe](https://rootaxe.com)** · *Not out yet, early access open*<br>Control your Mac from your iPhone, Apple Watch and AirPods.
+- **[Nebulaform](https://nebulaform.vercel.app)** · *Live*<br>Describe a form and it builds itself: fields, validation, a shareable link and the responses.
+- **[Lookout](https://lookout.neurobaselabs.com)** · *Early access*<br>One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source.
+
+### Open source
+
+- **[Claude Council](https://github.com/SuperShary/claude-council)** · ★ 2 · [site](https://supershary.github.io/claude-council/)<br>A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict.
+- **[Verdict](https://github.com/SuperShary/verdict-proof)** · [live](https://verdict-chi-one.vercel.app) · [film](https://youtu.be/FGKhSeXxdio)<br>Invoice PDF in, a reasoned approve, hold, reject or block decision out, proven with a seeded stress test.
+
+### Channels
+
+- **[SuperShary](https://www.youtube.com/@SuperSharyG63)** on YouTube · 756 subscribers<br>Tools, agents and real builds with AI, in Hindi and English.
+- **[Shagun Choudhary](https://www.youtube.com/@Shagunchoudharyrocks)** on YouTube · 1,410 subscribers<br>Car explainers for Indian buyers.
+- **[SuperShary AI Community](https://discord.gg/HyWFsTt8th)** on Discord<br>Questions, builds and job help.
+
+### By the numbers
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 4298 contributions, 43 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/data-light.svg"><img alt="Data profile: 4,298 contributions in the last year, 43 day longest streak, languages and YouTube reach." src="assets/data-dark.svg" width="100%"></picture>
 
 </div>
 
-<sub>A GitHub Action pulls every number here from the GitHub API and the public YouTube channel pages, every day. None of it is typed by hand.</sub>
+<sub>A GitHub Action pulls every number from the GitHub API and the public YouTube pages, every day. The contribution count is GitHub's own, which includes private work.</sub>
 
-**Stack:** TypeScript · Next.js · Node · Python · Swift · Electron · Fastify · SQLite · Azure · Vercel · n8n · FFmpeg · three.js
-
-### 🧠 Projects <sub>· every card opens the project</sub>
-
-<div align="center">
-
-<a href="https://verdict-chi-one.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/verdict-proof-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/verdict-proof-light.svg"><img alt="Verdict: Every invoice becomes a reasoned pay / hold decision, proven with a seeded stress test and live PDF reading." src="assets/cards/verdict-proof-dark.svg" width="49%"></picture></a>
-<a href="https://supershary.github.io/claude-council/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/claude-council-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/claude-council-light.svg"><img alt="Claude Council: 80 legendary minds debate your decision in character, then a High Council hands back one verdict." src="assets/cards/claude-council-dark.svg" width="49%"></picture></a>
-<br/>
-<a href="https://github.com/SuperShary/multi-agent-invoice-reconciliation-system"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/multi-agent-invoice-reconciliation-system-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/multi-agent-invoice-reconciliation-system-light.svg"><img alt="Invoice Reconciliation Agents: Agents extract supplier invoices, fuzzy-match them to purchase orders and flag every discrepancy." src="assets/cards/multi-agent-invoice-reconciliation-system-dark.svg" width="49%"></picture></a>
-<a href="https://github.com/SuperShary/Building-an-AI-agent-Chrome-extension"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/Building-an-AI-agent-Chrome-extension-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/Building-an-AI-agent-Chrome-extension-light.svg"><img alt="Agent Chrome Extension: A Manifest V3 extension with a rule-based reasoning agent over semantic and keyword search." src="assets/cards/Building-an-AI-agent-Chrome-extension-dark.svg" width="49%"></picture></a>
-<br/>
-<a href="https://holospeed.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/Holospeed-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/Holospeed-light.svg"><img alt="Holospeed: Fly a spaceship through infinite space by moving your hands in front of the camera." src="assets/cards/Holospeed-dark.svg" width="49%"></picture></a>
-<a href="https://lamborgini-mu.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/Lamborgini-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/Lamborgini-light.svg"><img alt="Aventador Scrollytelling: The Aventador explodes into its parts as you scroll. Built live for a SuperShary tutorial." src="assets/cards/Lamborgini-dark.svg" width="49%"></picture></a>
-<br/>
-<a href="https://monsterenergy-theta.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/monsterenergy-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/monsterenergy-light.svg"><img alt="Monster Energy Scrollytelling: Rotating 3D cans driven by scroll. The second build from the same tutorial series." src="assets/cards/monsterenergy-dark.svg" width="49%"></picture></a>
-<a href="https://github.com/SuperShary/beyondchats"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/beyondchats-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/beyondchats-light.svg"><img alt="LLM Response Evaluator: A Python pipeline that scores chatbot answers for relevance and hallucination in real time." src="assets/cards/beyondchats-dark.svg" width="49%"></picture></a>
-
-</div>
-
-### 🎬 Channels
-
-<div align="center">
-
-<a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/yt-SuperSharyG63-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/yt-SuperSharyG63-light.svg"><img alt="SuperShary on YouTube: Building real systems with AI agents, start to finish." src="assets/cards/yt-SuperSharyG63-dark.svg" width="49%"></picture></a>
-<a href="https://www.youtube.com/@Shagunchoudharyrocks"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/yt-Shagunchoudharyrocks-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/yt-Shagunchoudharyrocks-light.svg"><img alt="Shagun Choudhary on YouTube: Car explainers for Indian buyers: why the market does what it does." src="assets/cards/yt-Shagunchoudharyrocks-dark.svg" width="49%"></picture></a>
-
-</div>
-
-### 🔒 In production, private code
-
-<div align="center">
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/private-0-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/private-0-light.svg"><img alt="Nexus AI: AP automation for construction ERPs: invoice in, PO match, approval routing, clean posting. In production." src="assets/cards/private-0-dark.svg" width="49%"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/private-1-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/private-1-light.svg"><img alt="SuperShary OS: A desktop command centre where a team of AI agents runs the day's work with me." src="assets/cards/private-1-dark.svg" width="49%"></picture>
-
-</div>
-
-### 🔗 Every link
-
-| Project | Code | Open |
-|---|---|---|
-| **Verdict** | [verdict-proof](https://github.com/SuperShary/verdict-proof) | [live](https://verdict-chi-one.vercel.app) · [film](https://youtu.be/FGKhSeXxdio) |
-| **Claude Council** | [claude-council](https://github.com/SuperShary/claude-council) | [site](https://supershary.github.io/claude-council/) |
-| **Invoice Reconciliation Agents** | [multi-agent-invoice-reconciliation-system](https://github.com/SuperShary/multi-agent-invoice-reconciliation-system) | · |
-| **Agent Chrome Extension** | [Building-an-AI-agent-Chrome-extension](https://github.com/SuperShary/Building-an-AI-agent-Chrome-extension) | · |
-| **Holospeed** | [Holospeed](https://github.com/SuperShary/Holospeed) | [live](https://holospeed.vercel.app) |
-| **Aventador Scrollytelling** | [Lamborgini](https://github.com/SuperShary/Lamborgini) | [live](https://lamborgini-mu.vercel.app) |
-| **Monster Energy Scrollytelling** | [monsterenergy](https://github.com/SuperShary/monsterenergy) | [live](https://monsterenergy-theta.vercel.app) |
-| **LLM Response Evaluator** | [beyondchats](https://github.com/SuperShary/beyondchats) | · |
-
-More public repos: [Resume-Analyzer-Pro](https://github.com/SuperShary/Resume-Analyzer-Pro) · [infocream_web](https://github.com/SuperShary/infocream_web) · [nexuspredictai](https://github.com/SuperShary/nexuspredictai) · [cinematch](https://github.com/SuperShary/cinematch) · [aidoctor](https://github.com/SuperShary/aidoctor) · [jbl](https://github.com/SuperShary/jbl) · [FluxColab](https://github.com/SuperShary/FluxColab) · [jarvis](https://github.com/SuperShary/jarvis)
-
-### 🌌 Activity
+**Stack:** TypeScript · Next.js · Node · Python · Swift · Electron · Supabase · Azure · Vercel · MCP
 
 <div align="center">
 
@@ -97,6 +65,6 @@ More public repos: [Resume-Analyzer-Pro](https://github.com/SuperShary/Resume-An
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" width="100%" />
 </picture>
 
-<sub>This profile rebuilds itself every day. The brain, the data card and the cards are drawn by <a href="scripts">my own generator</a> (<a href="docs/RESEARCH-v3.md">how it works</a>). Last run 2026-11-20.</sub>
+<sub>This profile rebuilds itself every day. The brain and the data card are drawn by <a href="scripts">my own generator</a> (<a href="docs/RESEARCH-v3.md">how it works</a>). Last run 2026-11-20.</sub>
 
 </div>

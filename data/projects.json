@@ -1,27 +1,102 @@
 {
-  "featured": [
-    { "repo": "verdict-proof", "title": "Verdict", "hook": "Every invoice becomes a reasoned pay / hold decision, proven with a seeded stress test and live PDF reading.", "tags": ["AP automation", "document AI"], "links": { "live": "https://verdict-chi-one.vercel.app", "film": "https://youtu.be/FGKhSeXxdio" } },
-    { "repo": "claude-council", "title": "Claude Council", "hook": "80 legendary minds debate your decision in character, then a High Council hands back one verdict.", "tags": ["agent skill", "multi-agent"], "links": { "site": "https://supershary.github.io/claude-council/" } },
-    { "repo": "multi-agent-invoice-reconciliation-system", "title": "Invoice Reconciliation Agents", "hook": "Agents extract supplier invoices, fuzzy-match them to purchase orders and flag every discrepancy.", "tags": ["multi-agent", "Python"], "links": {} },
-    { "repo": "Building-an-AI-agent-Chrome-extension", "title": "Agent Chrome Extension", "hook": "A Manifest V3 extension with a rule-based reasoning agent over semantic and keyword search.", "tags": ["agents", "browser"], "links": {} },
-    { "repo": "Holospeed", "title": "Holospeed", "hook": "Fly a spaceship through infinite space by moving your hands in front of the camera.", "tags": ["hand tracking", "3D"], "links": { "live": "https://holospeed.vercel.app" } },
-    { "repo": "Lamborgini", "title": "Aventador Scrollytelling", "hook": "The Aventador explodes into its parts as you scroll. Built live for a SuperShary tutorial.", "tags": ["scroll animation", "tutorial"], "links": { "live": "https://lamborgini-mu.vercel.app" } },
-    { "repo": "monsterenergy", "title": "Monster Energy Scrollytelling", "hook": "Rotating 3D cans driven by scroll. The second build from the same tutorial series.", "tags": ["scroll animation", "3D"], "links": { "live": "https://monsterenergy-theta.vercel.app" } },
-    { "repo": "beyondchats", "title": "LLM Response Evaluator", "hook": "A Python pipeline that scores chatbot answers for relevance and hallucination in real time.", "tags": ["LLM evals", "Python"], "links": {} }
+  "intro": "Founder's Office, AI & GTM at [Proxsoft](https://proxsoftglobal.com). I build AI agents for construction finance that work on top of the ERP a company already runs. On my own time I build Orbital Browser, Rootaxe and Nebulaform, and I teach AI automation as SuperShary.",
+  "proxsoft": [
+    {
+      "name": "Nexus",
+      "line": "AP automation. An invoice arrives by email or upload, gets read and matched to its purchase order, and posts to the ERP only after a person approves.",
+      "status": "In production"
+    },
+    {
+      "name": "Foremind",
+      "line": "AI agents for construction ERPs. The first module is AP automation: invoices in, matched and ready to approve.",
+      "status": "Shown in live demos",
+      "link": "https://proxsoftglobal.com/foremind-ap-automation/"
+    }
   ],
-  "more": ["Resume-Analyzer-Pro", "infocream_web", "nexuspredictai", "cinematch", "aidoctor", "jbl", "FluxColab", "jarvis"],
-  "hidden": ["SuperShary", "GoGreen", "lonlybot", "Assignment"],
-  "private": [
-    { "title": "Nexus AI", "hook": "AP automation for construction ERPs: invoice in, PO match, approval routing, clean posting. In production." },
-    { "title": "SuperShary OS", "hook": "A desktop command centre where a team of AI agents runs the day's work with me." }
+  "products": [
+    {
+      "name": "Orbital Browser",
+      "link": "https://orbitalbrowser.com",
+      "line": "The browser your AI agent drives. It reads pages as small text slices, and anything that posts, sends, pays or deletes waits for your click.",
+      "status": "Coming soon, waitlist open"
+    },
+    {
+      "name": "Rootaxe",
+      "link": "https://rootaxe.com",
+      "line": "Control your Mac from your iPhone, Apple Watch and AirPods.",
+      "status": "Not out yet, early access open"
+    },
+    {
+      "name": "Nebulaform",
+      "link": "https://nebulaform.vercel.app",
+      "line": "Describe a form and it builds itself: fields, validation, a shareable link and the responses.",
+      "status": "Live"
+    },
+    {
+      "name": "Lookout",
+      "link": "https://lookout.neurobaselabs.com",
+      "line": "One private memory of your meetings that you can ask from Claude Code, with every answer traced to its source.",
+      "status": "Early access"
+    }
+  ],
+  "openSource": [
+    {
+      "repo": "claude-council",
+      "name": "Claude Council",
+      "line": "A Claude skill where 80 legendary minds argue your decision in character and a High Council hands back one verdict.",
+      "links": {
+        "site": "https://supershary.github.io/claude-council/"
+      }
+    },
+    {
+      "repo": "verdict-proof",
+      "name": "Verdict",
+      "line": "Invoice PDF in, a reasoned approve, hold, reject or block decision out, proven with a seeded stress test.",
+      "links": {
+        "live": "https://verdict-chi-one.vercel.app",
+        "film": "https://youtu.be/FGKhSeXxdio"
+      }
+    }
+  ],
+  "more": [
+    "multi-agent-invoice-reconciliation-system",
+    "Building-an-AI-agent-Chrome-extension",
+    "Holospeed",
+    "Lamborgini",
+    "monsterenergy",
+    "beyondchats",
+    "Resume-Analyzer-Pro",
+    "infocream_web",
+    "nexuspredictai",
+    "cinematch",
+    "aidoctor",
+    "jbl",
+    "FluxColab",
+    "jarvis"
+  ],
+  "hidden": [
+    "SuperShary",
+    "GoGreen",
+    "lonlybot",
+    "Assignment"
   ],
   "channels": [
-    { "handle": "SuperSharyG63", "name": "SuperShary", "hook": "Building real systems with AI agents, start to finish." },
-    { "handle": "Shagunchoudharyrocks", "name": "Shagun Choudhary", "hook": "Car explainers for Indian buyers: why the market does what it does." }
+    {
+      "handle": "SuperSharyG63",
+      "name": "SuperShary",
+      "hook": "Tools, agents and real builds with AI, in Hindi and English."
+    },
+    {
+      "handle": "Shagunchoudharyrocks",
+      "name": "Shagun Choudhary",
+      "hook": "Car explainers for Indian buyers."
+    }
   ],
   "socials": {
+    "youtube": "https://www.youtube.com/@SuperSharyG63",
+    "instagram": "https://www.instagram.com/supershary.ai",
+    "discord": "https://discord.gg/HyWFsTt8th",
     "linkedin": "https://www.linkedin.com/in/supershary",
-    "x": "https://x.com/supersharyai",
-    "instagram": "https://www.instagram.com/supershary.ai"
+    "x": "https://x.com/supersharyai"
   }
 }

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,427 contributions." src="assets/brain-dark.svg" width="100%"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/brain-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/brain-light.svg"><img alt="Shagun Choudhary. I build AI agents that do real work. A rotating brain of 365 neurons, one per day of my last year on GitHub: 4,584 contributions." src="assets/brain-dark.svg" width="100%"></picture>
 
 <a href="https://www.youtube.com/@SuperSharyG63"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-yt-supershary-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-yt-supershary-light.svg"><img alt="YouTube · SuperShary" src="assets/v5/pill-yt-supershary-dark.svg" height="40"></picture></a>
 <a href="https://www.youtube.com/@Shagunchoudharyrocks"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/pill-yt-shagun-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/pill-yt-shagun-light.svg"><img alt="YouTube · Shagun Choudhary" src="assets/v5/pill-yt-shagun-dark.svg" height="40"></picture></a>
@@ -34,7 +34,7 @@
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,427 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/year-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/year-light.svg"><img alt="4,584 contributions in the last 365 days" src="assets/v5/year-dark.svg" width="400"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/v5/reach-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/v5/reach-light.svg"><img alt="Reach: YouTube, Instagram and GitHub numbers" src="assets/v5/reach-dark.svg" width="400"></picture>
 
 <picture>
@@ -43,6 +43,6 @@
   <img alt="Contribution snake" src="https://raw.githubusercontent.com/SuperShary/SuperShary/output/github-snake-dark.svg" width="100%" />
 </picture>
 
-<sub>Every picture on this page is drawn by <a href="scripts">my own generator</a> and rebuilt every day from GitHub and YouTube numbers. Last run 2026-11-20.</sub>
+<sub>Every picture on this page is drawn by <a href="scripts">my own generator</a> and rebuilt every day from GitHub and YouTube numbers. Last run 2026-11-21.</sub>
 
 </div>
